@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Título</title>
+    <script type="text/javascript" src="./JVScript.js"></script>
+   <link rel="stylesheet" type="text/css" href="./javascript.css">
+  </head>
+  <body onload="foco();" onload="diaActual();">
+   
+<form action="destino.php" name="formu">
+    <div>
+        <table >
+            <tr>
+                <td>Usuario: <input id="usuario" type="text" name="usuario" onchange="comp_usuario();">  <!-- onclick="comp_caracteres();">*/-->
+                </td> <td colspan="2">Contraseña: <input id="contraseña" type="text" name="contraseña" value="" size="12" onclick="comp_contraseña();">
+                </td>
+            </tr> 
+         <tr>
+                <td colspan="3"> Correo electronico: <input id="correo" type="text" name="correo" size="22" onchange="correoElectronico();">
+                </td> 
+         </tr> 
+            <tr>
+                <td>Nombre: <input id="nombre" type="text" name="texto" onchange="VerNombre();">
+                </td>
+                <td>FNacimiento: <input id="fecha" type="text" name="fecha" value="" size="16" onchange="comp_Fecha();"></td>
+                <td>
+                    Dni: <input id="Dni" type="text" name="Dni" size="10" onchange="fDni();">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"> Apellidos: <input id="apellidosin" type="text" name="apellidosin" size="28" onchange="comp_apellido();"></td>
+            </tr>
+            <tr>
+                <td colspan="3"> Calle y numero: <input id="direccion" type="text" name="direccion"></td>
+            </tr>
+            <tr>
+                <td> ¿tienes hijos? <br>
+                    <input id="hijosNo" type="radio" name="hijos" value="No"> No<br>
+                    <input id="hijosSi" type="radio" name="hijos" value="Si"> Si 
+                </td> 
+                    <td colspan="2"  >vacio</td>
+            </tr>
+            <tr></tr>
+                    
+                
+            <tr>
+                <td>Codigo Postal: <input id="cpostal" type="text" name="cpostal" size="5" onchange="fPostal();"></td>
+                <td> Ciudad: <select id="ciudad" name="ciudad"><option value="a" selected="selected">Elija una opcion</option></select></td>
+                <td> Telefono: <input id="telefono" type="text" name="telefono" size="10"></td>
+    
+            </tr>
+            <tr>
+                 <td > Ocupacion: 
+                     <select name="ciudad"><option value="a" selected="selected">Elija una opcion</option> </select>
+                </td>
+                 <td colspan="2" >Estado Civil: <br>
+                        <input id="estadoCasado"type="radio" name="estado" value="casado"> Casado<br>
+                        <input id="estadoSoltero"type="radio" name="estado" value="soltero"> Soltero <br>
+                        <input id="estadoPareja"type="radio" name="estado" value="pareja"> Pareja de Hecho 
+                </td>
+            </tr>
+               
+                
+                    <tr>
+                        <td >Hobbies: <br>
+                            <input id="deporte" type="checkbox" name="deporte">Deporte<br>
+                            <input id="cine" type="checkbox" name="cine">Cine<br>
+                            <input  id="copas" type="checkbox" name="copas">Copas
+                        </td>
+                        <td >Tienes movil<br>
+                                <input id="movilSi"type="radio" name="movil" value="si"> Si<br>
+                                <input id="movilNo"type="radio" name="movil" value="no">No
+                        </td>
+                        <td>Marca
+                            <select id="ciudad"name="ciudad"><option value="marca" selected="selected">Selecciona una opcion</option>
+
+                        </td>
+                    </tr>
+                    
+             <tr><td >
+                        Comentarios personales: 
+                    </td>
+                
+                <td colspan="2" >
+                        <textarea name="comentarios" cols="40" rows="3"></textarea>
+
+
+                </td>
+            </tr>
+              
+                <tr>
+                    <td colspan="3"> 
+                            <input id="enviar" name="enviar" type="button" value="Enviar datos" onclick="final ();">
+                            <input id="borrar" name="borrar" type="reset" value="Borrar datos">
+
+                    </td>
+                </tr>
+        </table>
+    </div>
+
+</form>
+
+  </body>
+</html>
