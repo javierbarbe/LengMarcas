@@ -118,7 +118,7 @@ function fDni(){
                  comp_dni=0;
                     }
 
-    alert(comp_dni);
+    //alert(comp_dni);
         
     } 
     return (comp_dni);
@@ -202,15 +202,21 @@ return compFpostal;
                                     alert('demasiado corto')
                              }*/
 
+function quita_submen(){
+  var eleccionNo= document.getElementById('hijosNo').checked;
+  //alert(eleccionNo);
+  if(eleccionNo==true){
+    document.getElementById('menuOculto').style.display = "none";
+  }
+}
+
 function pon_submenu(){
     //var hijosComp=1;
     var hijosEleccionSi=document.getElementById('hijosSi').checked;
     
     if (hijosEleccionSi==true){
             document.getElementById('menuOculto').style.display = "contents";
-        } else {
-           text.style.display = "none";
-        }
+        } 
         
    
     
@@ -239,8 +245,8 @@ function pon_submenu(){
     anyo=parseInt(anyo);
     mest=parseInt(mest);
     diast=parseInt(diast);
-    if(anyo<=1800 || anyo >=2019 || mest <1 || mest>12 || diast <1 ||diast >31){
-       alert('no has podido nacer en esa fecha');
+    if(anyo<=1920 || anyo >=2019 || mest <1 || mest>12 || diast <1 ||diast >31){
+       //alert('no has podido nacer en esa fecha');
          fechComp=0;
         }
     
@@ -248,6 +254,11 @@ function pon_submenu(){
     //alert(fechComp);
 } return fechComp;
 }
+
+function enviar(){
+   
+    }
+
 
 function comp_ocupacion(){
     var ocuFinal=1; 
@@ -297,11 +308,11 @@ function comp_telefono(){
     var numtel=document.getElementById('telefono').value;
     telefComp=1;
     if(numtel.length!=9){
-        alert('numero no coincide con longitud');
+       // alert('numero no coincide con longitud');
         telefComp=0;
         }else {
             if(isNaN(numtel)){
-                alert('introduzca solo digitos plis');
+               // alert('introduzca solo digitos plis');
                 telefComp=0;
             }
         }return telefComp;
@@ -319,6 +330,7 @@ function final (){
     var telf= comp_telefono();
     var city= comp_ciudad(); 
     var ocupation= comp_ocupacion();
+    var submint= 0;
 
     if (usu != 1) {
         document.formu.usuario.value = "";
@@ -332,68 +344,68 @@ function final (){
                 document.formu.correo.focus();
                 return false;
                   } else {
-                      alert('seguimos comprobando  ahora codPostal');
+                     // alert('seguimos comprobando  ahora codPostal');
                       if (PostalCodeCorrecto !=1){
                           document.formu.cpostal.value="";
                           document.formu.cpostal.focus();
                           return false;
                               }else  {
-                                    alert('comprobando ahoraDNI');
+                                    //alert('comprobando ahoraDNI');
                                    // alert(Dnifinal);
                                     if(Dnifinal !=1){
                                         document.getElementById('Dni').value="";
                                         document.getElementById('Dni').focus();
                                         alert('dni no es correcto')
                                     } else{
-                                        alert('continuamos con nombre');
+                                      //  alert('continuamos con nombre');
                                   
                                                 if(nombreApe!=1){
                                                     alert('nombre caracters no admitidos');
                                                     document.getElementById('nombre').value="";
                                                     document.getElementById('nombre').focus();
                                                 }else {
-                                                    alert('continuamos con apellido');
+                                                  //  alert('continuamos con apellido');
                                                          if (apeNombre!=1){
                                                             alert('apellido mal');
                                                             document.getElementById('apellidosin').value="";
                                                             document.getElementById('apellidosin').focus();
                                                          }else {
-                                                                alert('continuamos con contraseña');
+                                                                //alert('continuamos con contraseña');
                                                                 if( contraFinal!=1){
                                                                     alert ('contraseña no cumple long =8');
                                                                     document.getElementById('contraseña').value="";
                                                                     document.getElementById('contraseña').focus();
                                                                 }else{
-                                                                    alert('seguimos con fecha');
+                                                                   // alert('seguimos con fecha');
                                                                     if( fechTotal!=1){
                                                                         alert('fecha incorrecta\n formato dd/mm/aaaa');
                                                                         document.getElementById('fecha').value="";
                                                                         document.getElementById('fecha').focus();
                                                                     }else {
-                                                                        alert('seguimos con checkbox');
+                                                                       // alert('seguimos con checkbox');
                                                                         var optHijosSi=document.getElementById('hijosSi').checked;
                                                                         var optHijosNo=document.getElementById('hijosNo').checked;
                                                                         if(optHijosNo == false && optHijosSi== false){
                                                                        // if(document.getElementById('hijosSi').checked!= true && document.getElementById('hijosNo').checked=true){
                                                                      alert('necesario elegir una opcion');}
                                                                      else {
-                                                                         alert ('seguimos con... telefono')
+                                                                         //alert ('seguimos con... telefono')
                                                                          if(telf!=1){
                                                                              alert('el telefono no tiene 9 digitos,o tiene letras');
                                                                              document.getElementById('telefono').value="";
                                                                              document.getElementById('telefono').focus();
                                                                          } else{
-                                                                             alert('seguimos con ...ciudad');
+                                                                            // alert('seguimos con ...ciudad');
                                                                              if(city!=1){
                                                                                  alert('elija una ciudad');
                                                                                  document.getElementById('ciudad').focus();
                                                                              }else{
-                                                                                 alert('seguimos con ocupacion');
+                                                                                // alert('seguimos con ocupacion');
                                                                                  if(ocupation!=1){
                                                                                      alert('elija ocupacion');
                                                                                      document.getElementById('ocupacion').focus();
                                                                                  }else{
-                                                                                     alert('seguimos con movil??')
+                                                                                    // alert('seguimos con movil??')
                                                                                     var movSi=document.getElementById('movilSi').checked;
                                                                                     var movNo=document.getElementById('movilNo').checked;
                                                                              if(movNo == false && movSi== false){
@@ -404,7 +416,13 @@ function final (){
                                                                                 var mvl3=document.getElementById('samsung').selected;
                                                                                 if (mvl1!=true && mvl2!= true && mvl3!=true){
                                                                                     alert('necesario elegir una marca de movil');
-                                                                                }
+                                                                                }else{
+                                                                                    alert('formulario comprobado');
+                                                                                    
+                                                                                 
+                                                                                      document.formu.submit();
+                                                                                   
+                                                                                    }
                                                                             }
                                                                                  }
 

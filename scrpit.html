@@ -13,7 +13,7 @@
                 var f=new Date();
                 document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
          </script>
-<form action="destino.php" name="formu">
+<form action="destino.php" name="formu" method="GET">
     <div>
         <table >
             <tr>
@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td> ¿tienes hijos? <br>
-                    <input id="hijosNo" type="radio" name="hijos" value="No"> No<br>
+                    <input id="hijosNo" type="radio" name="hijos" value="No" onclick="quita_submen();"> No<br>
                     <input id="hijosSi" type="radio" name="hijos" value="Si" onclick="pon_submenu();"> Si 
                  
                 </td> 
