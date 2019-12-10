@@ -330,7 +330,7 @@ function final (){
     var telf= comp_telefono();
     var city= comp_ciudad(); 
     var ocupation= comp_ocupacion();
-    var submint= 0;
+  
 
     if (usu != 1) {
         document.formu.usuario.value = "";
@@ -342,7 +342,7 @@ function final (){
                  if(Correo_correcto !=1){
                 document.formu.correo.value="";
                 document.formu.correo.focus();
-                return false;
+                 return false;
                   } else {
                      // alert('seguimos comprobando  ahora codPostal');
                       if (PostalCodeCorrecto !=1){
@@ -355,6 +355,7 @@ function final (){
                                     if(Dnifinal !=1){
                                         document.getElementById('Dni').value="";
                                         document.getElementById('Dni').focus();
+                                        return false;
                                         alert('dni no es correcto')
                                     } else{
                                       //  alert('continuamos con nombre');
@@ -363,59 +364,70 @@ function final (){
                                                     alert('nombre caracters no admitidos');
                                                     document.getElementById('nombre').value="";
                                                     document.getElementById('nombre').focus();
+                                                    return false;
                                                 }else {
                                                   //  alert('continuamos con apellido');
                                                          if (apeNombre!=1){
                                                             alert('apellido mal');
                                                             document.getElementById('apellidosin').value="";
                                                             document.getElementById('apellidosin').focus();
+                                                            return false;
                                                          }else {
                                                                 //alert('continuamos con contraseña');
                                                                 if( contraFinal!=1){
                                                                     alert ('contraseña no cumple long =8');
                                                                     document.getElementById('contraseña').value="";
                                                                     document.getElementById('contraseña').focus();
+                                                                    return false;
                                                                 }else{
                                                                    // alert('seguimos con fecha');
                                                                     if( fechTotal!=1){
                                                                         alert('fecha incorrecta\n formato dd/mm/aaaa');
                                                                         document.getElementById('fecha').value="";
                                                                         document.getElementById('fecha').focus();
+                                                                        return false;
                                                                     }else {
                                                                        // alert('seguimos con checkbox');
                                                                         var optHijosSi=document.getElementById('hijosSi').checked;
                                                                         var optHijosNo=document.getElementById('hijosNo').checked;
                                                                         if(optHijosNo == false && optHijosSi== false){
                                                                        // if(document.getElementById('hijosSi').checked!= true && document.getElementById('hijosNo').checked=true){
-                                                                     alert('necesario elegir una opcion');}
+                                                                     alert('necesario elegir una opcion');
+                                                                     return false;
+                                                                    }
                                                                      else {
                                                                          //alert ('seguimos con... telefono')
                                                                          if(telf!=1){
                                                                              alert('el telefono no tiene 9 digitos,o tiene letras');
                                                                              document.getElementById('telefono').value="";
                                                                              document.getElementById('telefono').focus();
+                                                                             return false;
                                                                          } else{
                                                                             // alert('seguimos con ...ciudad');
                                                                              if(city!=1){
                                                                                  alert('elija una ciudad');
                                                                                  document.getElementById('ciudad').focus();
+                                                                                 return false;
                                                                              }else{
                                                                                 // alert('seguimos con ocupacion');
                                                                                  if(ocupation!=1){
                                                                                      alert('elija ocupacion');
                                                                                      document.getElementById('ocupacion').focus();
+                                                                                     return false;
                                                                                  }else{
                                                                                     // alert('seguimos con movil??')
                                                                                     var movSi=document.getElementById('movilSi').checked;
                                                                                     var movNo=document.getElementById('movilNo').checked;
                                                                              if(movNo == false && movSi== false){
                                                                                alert('necesario elegir una opcion');
+                                                                               return false;
                                                                             }else {
                                                                                 var mvl1=document.getElementById('iPhone25').selected;
                                                                                 var mvl2=document.getElementById('xiaomi').selected;
                                                                                 var mvl3=document.getElementById('samsung').selected;
                                                                                 if (mvl1!=true && mvl2!= true && mvl3!=true){
                                                                                     alert('necesario elegir una marca de movil');
+                                                                                    return false;
                                                                                 }else{
                                                                                     alert('formulario comprobado');
                                                                                     
