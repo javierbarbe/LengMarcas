@@ -1,8 +1,8 @@
 body{background-color: rgb(206, 36, 206);}
-div{width: 70%; margin:auto; margin-bottom:10px; background-color: salmon;
-     border-color:white; height: 70%;
+div{width: 70%; margin:auto;margin-top: 25px; margin-bottom:5px; background-color: salmon;
+     border-color:white; height: 90%;
     border-style: solid; border-width: 2px;}
 table{width: 100%; border-collapse: collapse; height: 90%;}
 td{ border-style: dotted;       
     border-color: white;border-width: 2px;}
-    #usuario {:}
+    

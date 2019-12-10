@@ -1,18 +1,24 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>Título</title>
-    <script type="text/javascript" src="./JVScript.js"></script>
+        <!-- <meta charset="utf-8">  DA ERROR-->
+        <!-- <meta content="text/hmtl;charset=utf-8">  ESTO NO LO RECONOCE-->
+    <title>FormularioJavier</title>
+    <script type="text/javascript" src="./proyectoLenguaje.js"></script> 
    <link rel="stylesheet" type="text/css" href="./javascript.css">
   </head>
-  <body onload="foco();" onload="diaActual();">
-   
+  <body onload="foco();">
+        <script type="text/javascript">
+                var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                var f=new Date();
+                document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+         </script>
 <form action="destino.php" name="formu">
     <div>
         <table >
             <tr>
                 <td>Usuario: <input id="usuario" type="text" name="usuario" onchange="comp_usuario();">  <!-- onclick="comp_caracteres();">*/-->
-                </td> <td colspan="2">Contraseña: <input id="contraseña" type="text" name="contraseña" value="" size="12" onclick="comp_contraseña();">
+                </td> <td colspan="2">Contraseña: <input id="contrasenya" type="text" name="contrasenya" value="" size="12" onchange="comp_contrasenya();">
                 </td>
             </tr> 
          <tr>
@@ -36,22 +42,43 @@
             <tr>
                 <td> ¿tienes hijos? <br>
                     <input id="hijosNo" type="radio" name="hijos" value="No"> No<br>
-                    <input id="hijosSi" type="radio" name="hijos" value="Si"> Si 
+                    <input id="hijosSi" type="radio" name="hijos" value="Si" onclick="pon_submenu();"> Si 
+                 
                 </td> 
-                    <td colspan="2"  >vacio</td>
+                    <td colspan="2"  >
+                         
+                    <div id="menuOculto" style="display:none">
+                    <input id="numHijos" type="radio" name="numHijos" checked="checked" >1 <br>
+                    <input id="numHijos2" type="radio" name="numHijos">2 <br>
+                    <input id="numHijos3" type="radio" name="numHijos" >3 o más <br>
+                </div>
+              
+                </td>
+                     
             </tr>
-            <tr></tr>
+            
                     
                 
             <tr>
                 <td>Codigo Postal: <input id="cpostal" type="text" name="cpostal" size="5" onchange="fPostal();"></td>
-                <td> Ciudad: <select id="ciudad" name="ciudad"><option value="a" selected="selected">Elija una opcion</option></select></td>
-                <td> Telefono: <input id="telefono" type="text" name="telefono" size="10"></td>
+                <td> Ciudad: <select id="ciudad" name="ciudad"  onblur="comp_ciudad()">
+                                    <option value="a"  selected="selected" id="EligeCiudad"> Elija una opcion</option>
+                                    <option value="Madrid"  id="Madrid">Madrid  </option>
+                                    <option value="Alcala de Henares" id="Alcala">Alcala de Henares </option>
+                                    <option value="Meco" id="Meco">Meco </option>
+                            </select> 
+                        </td>
+                <td> Telefono: <input id="telefono" type="text" name="telefono" size="10" onchange="comp_telefono();"></td>
     
             </tr>
             <tr>
                  <td > Ocupacion: 
-                     <select name="ciudad"><option value="a" selected="selected">Elija una opcion</option> </select>
+                     <select name="ocupacion" id="ocupacion" onblur="comp_ocupacion();">
+                         <option value="a" selected="selected">Elija una opcion</option> 
+                         <option value="estudiante" id="estudiante">Estudiante</option> 
+                         <option value="desempleado" id="desempleado">Desempleado</option> 
+                         <option value="amaDeCasa" id="amaDeCasa">Ama de Casa</option> 
+                        </select>
                 </td>
                  <td colspan="2" >Estado Civil: <br>
                         <input id="estadoCasado"type="radio" name="estado" value="casado"> Casado<br>
@@ -68,11 +95,17 @@
                             <input  id="copas" type="checkbox" name="copas">Copas
                         </td>
                         <td >Tienes movil<br>
-                                <input id="movilSi"type="radio" name="movil" value="si"> Si<br>
-                                <input id="movilNo"type="radio" name="movil" value="no">No
+                                <input id="movilSi"type="radio" name="movil" value="si" onclick="habilita_movil();"> Si<br>
+                                <input id="movilNo"type="radio" name="movil" value="no" onclick="deshabilita_movil();">No
                         </td>
                         <td>Marca
-                            <select id="ciudad"name="ciudad"><option value="marca" selected="selected">Selecciona una opcion</option>
+                            <select id="marca"name="marca" disabled>
+                                <option value="defecto" id="defecto" selected="selected">Selecciona una opcion</option>
+                                <option value="iPhone" id="iPhone25" >iPhone 25</option> 
+                                <option value="xiaomi" id="xiaomi">Xiaomi</option> 
+                                <option value="samsung" id="samsung">Samsung</option> 
+                                
+                               </select>
 
                         </td>
                     </tr>
@@ -90,7 +123,7 @@
               
                 <tr>
                     <td colspan="3"> 
-                            <input id="enviar" name="enviar" type="button" value="Enviar datos" onclick="final ();">
+                            <input id="enviar" name="enviar" type="button" value="Enviar datos" onclick="final();">
                             <input id="borrar" name="borrar" type="reset" value="Borrar datos">
 
                     </td>
@@ -99,6 +132,9 @@
     </div>
 
 </form>
-
+<p>
+        <a href="http://validator.w3.org/check?uri=referer"><img
+          src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+      </p>
   </body>
 </html>
