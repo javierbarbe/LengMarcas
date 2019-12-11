@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4//EN”>
+<HTML>
+<HEAD>
+	<TITLE>Tipo de fuentes</TITLE>
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<style type="text/css">
+.w100{font-weight: 100;}
+.w200{font-weight: 200;font-style: italic; }
+.w300{font-weight: 300;text-decoration: underline;}
+.w400{font-weight: 400; text-decoration: underline overline;font-weight: bold}
+.w500{font-weight: 500;text-decoration: underline overline line-through;}
+.centrado{text-align: center; text-indent: 50px;}
+.ancho{width: 25%;}
+body{background-color: blue;}
+table{
+    background-color: white;
+    border:3px black solid;
+    margin-top: 5em;
+    margin-left:5em;
+}
+table table{
+    background: grey;
+   margin:0px;
+    color:yellow;
+    width: 100%;
+}
+ td{
+    margin:20px;
+    border: 1px white;
+    border-style:solid;
+}
+p.alineado{
+    margin: 12em;
+    
+}
+</style>
+
+</HEAD>
+<body>
+
+   <div> <table>
+            <tr>
+                <td>
+                <p> Ejemplo de simbolo en negrita con valor 100</p>
+                    <table>
+                        <tr>
+                            <td class="w100">1</td>
+                        </tr>
+                    </table>
+                    <p>Ejemplo de simbolo en negrita con valor 200 y en cursiva</p>
+                    <table>
+                        <tr>
+                            <td class="w200">11</td><td class="w200">22</td>
+                        </tr>
+
+                    </table>
+                    <p>Ejemplo de simbolo en negrita con valor 300 en negrita y subrayada</p>
+                    <table>
+                        <tr>
+                            <td><u><b>11</b></u></td><td><u><b>22</b></u></td><td><u><b>33</b></u></td>
+                        </tr>
+                    </table>
+                    <p>Ejemplo de simbolo en negrita valor 400 y delimitada</p>
+                    <table>
+                        <tr>
+                            <td class="w400">111</td><td>222</td><td>333</td><td>444</td>
+                        </tr>
+                    </table>
+                    <p>Ejemplo de simbolo valor 500 delimitado y tachado</p>
+                    <table>
+                        <tr>
+                            <td class="w500">111</td><td class="w500">222</td><td class="w500">333</td><td class="w500">444</td>
+                        </tr>
+                    </table>
+                </td>
+               <div class="ancho"> <td style="border-left-color: red;border-style:solid; border-width: 6px;">
+                    <p class="alienado">Ejemplo de texto alienado al centro</p>
+                        <table>
+                            <tr>
+                                <td class="centrado">Este texto esta centrado y no tiene tabulaciones 
+                                    en ninguna de sus partes o elementos</td>
+                            </tr>
+                        </table>
+                    </td>
+                </div>
+            </tr>
+        </table>
+   </div>
+</body>
