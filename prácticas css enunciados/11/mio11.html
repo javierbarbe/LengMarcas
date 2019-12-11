@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<head>
+<title>iDESWEB</title>
+<style>
+h1, h4 {text-align: center}
+input:focus{background-color: yellow}
+input:hover{background-color: red}
+body{font-family: Arial, Helvetica, sans-serif}
+legend,fieldset {font-weight: bold}
+</style>
+</head>
+<body>
+    <h1>iDESWEB</h1>
+    <h4>Formulario de registro</h4>
+
+    <form action="destino.php" method="post">
+
+            <fieldset>
+                    <legend>¿QUIEN ERES?</legend>
+                       Nombre <br><input type="text" name="user" value=""/> <br>
+                       Apellidos <br><input type="text" name="user" value=""/> <br>
+                       
+       
+                       Correo electronico <br><input type="text" name="user" value=""/> <br>
+                       Fecha de nacimiento <br>
+                       <select name="seleccionar" >
+                            
+                                <option>Dia</option>
+                       </select>
+                       <select name="seleccionar" >
+                                <option>Mes</option>
+                       </select>
+                       <select name="seleccionar" >
+                            <option>Año</option>
+                   </select>                       
+                            
+                        </fieldset>
+                        <fieldset>
+                                <legend>¿DE DONDE ERES?</legend>
+                                   Ciudad <br><input type="text" name="user" value=""/> <br>
+                                   Código postal <br><input type="text" name="user" value=""/> <br>
+                                   
+                   
+                                   
+                                   País <br>
+                                   <select name="seleccionar" >
+                                        
+                                            <option>País</option>
+                                   </select>
+                                  
+                               </select>                       
+                                        
+                                    </fieldset>
+                                    <fieldset>
+                                            <legend>¿COMO QUIERES INICIAR SESION?</legend>
+                                               Nombre de usuario <br><input type="text" name="user" value=""/> <br>
+                                               Contraseña <br><input type="password" name="user" value=""/> <br>
+                                               Vuelve a escribir la contraseña <br><input type="password" name="user" value=""/> <br>
+                                              
+                                                    
+                                                </fieldset>
+
+        </form>
+</body>
+</html>
