@@ -1,0 +1,14 @@
+
+p{
+    color: rgb(189, 163, 46);
+    padding: 10px;
+    background-color: cornflowerblue;
+}
+ul{
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 32px;
+}
+td{
+    padding: 10px;
+}
