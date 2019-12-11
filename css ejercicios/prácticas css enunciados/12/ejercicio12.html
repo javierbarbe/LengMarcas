@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<head>
+        <meta charset=UTF-8>
+<title>Formulario de registro</title>
+<style type="text/css">
+    div{margin:20px 180px 20px 180px; background-color: honeydew;}
+hr{margin:15px;}
+h1 {text-align: left; padding-top: 20px; padding-left:20px}
+h4{  text-align: right; margin-right: 70%;}
+input{  
+    border-top: black 2px  solid; size: "45"; 
+        border-left:none; border-right: 5px; border-bottom: none;
+        }
+li input{size: "50";}
+input +input {margin-left: 10%;}
+select+select {margin-left: 25%;}
+select{border:none}
+input:focus{background-color: yellow}
+input:hover{background-color: red}
+body{font-family: Arial, Helvetica, sans-serif; background-color: grey;}
+input.movido{margin-left: 16%}
+span {margin-bottom: 55px;}
+div div{font-size: 600px}
+/* legend,fieldset {font-weight: bold} */
+li{margin-left: 30%; list-style-type:none; margin-right: 40px;}
+/* .boton {  border-style: inherit; border-radius: 3px; padding: 5px; margin-bottom:55px; float: right;}*/
+</style>
+</head>
+<body>
+    <div>
+        <form action="destino.php" method="post">
+
+    <h1>Formulario de registro</h1>
+   
+        <hr>
+             <h4>Nombre y apellidos </h4>
+             <ul>
+    <li> <input type="text" name="user" value="Nombre"> <br>
+  
+         
+         </li>
+         <li> <br><input type="text" name="user" value="Primer apellido" size="40"> <br>
+  
+            
+            </li>
+            <li> <br><input type="text" name="user" value="Segundo apellido" > <br>
+  
+               
+                </li>
+         
+</ul>
+    <hr>
+     <h4>Dirección </h4>
+     <ul>
+        <li>  <input type="text" name="user" value="Calle, númeno,piso,puerta" size="40"> <br>
+             <br><input type="text" name="user" value="Código postal" size="15"> 
+                <input type="text" name="user" value="Municipio" size="18" >  </li> 
+          <br>  <li> <select style="width: 95px;" name="Provincia"> 
+                <option value="1" ></option>
+            </select>
+                 <select name="País" style="width: 140px;" >
+                
+                    <option value="1"></option>
+                                  </select></li>
+<li> <input type="text" name="user" value="Provincia" size="10">
+    <input class="movido" type="text" name="user" value="País" size="15">
+    </ul>
+    <hr>
+     <h4>Email</h4>
+     <ul>
+    <li> <input type="text" name="user" value="" ></li>
+</ul>
+<hr>
+
+    <h4>Teléfono</h4>
+    <ul>
+    <li> <input type="text" name="user" value="Fijo" >
+     <input  class="movido" type="text" name="user" value="Móvil" > </li>
+
+</ul>  <hr> <br> 
+<span><div><input  class="boton"type="submit" name="user" value="Registrarse"> <br></div></span>
+</form></div>
+
+</body>
+</html>
