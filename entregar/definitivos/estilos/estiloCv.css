@@ -1,0 +1,8 @@
+body{ background-color: grey; color:black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 25px;}
+div{ background-color: rgb(219, 122, 228); margin-bottom: 25px;padding-bottom: 25px;}
+h1{margin: 30px; color:black}
+img{ position: relative; float: right;  margin-right:40%; height: 95px; width: 80px;}
+h3{color:rgb(91, 243, 248); padding-top: 25px; margin-left: 25px;}
+li{margin: 23px;}
+div span{color:rgb(236, 236, 155)}
+
