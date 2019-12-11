@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    var x,y; 
+    x=prompt('Ingrese coordenada x', ' ');
+    x=parseInt(x);
+    y=prompt('ingrese coordenada y', '');
+    y=parseInt(y);
+    if (x>0 && y>0){
+        document.write('Se encuentra en el primer cuadrante');
+    }else if(x>0 && y<0){
+        document.write('Se encuentra en el 4 cuadrante');
+    }else if(x<0 && y<0){
+        document.write('Se encuentra en el tercer cuadrante');
+    }else if(x<0 && y>0){
+        document.write('se encuentra en el segundo cuadrante')
+    }else{
+        document.write('Se encuentra en un eje');
+    }
+    
+    </script>
+
+    </body>
+</html>

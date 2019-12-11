@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+</head>
+<body>
+    
+<script type="text/javascript">
+do{
+var x; 
+
+x=prompt('introduce tu nota', '');
+x=parseFloat(x);
+if(isNaN(x)){
+    alert ("introduce un numero valido salida bucle");
+}else{
+
+if(x<=3){
+    document.write('Muy deficiente');
+}else if(x<5){
+    document.write('Deficiente');
+}else if(x<=6){
+    document.write('Suficiente');
+}else if(x<7){
+    document.write('Bien');
+}else if(x<9){
+    document.write('Notable');
+}else if(x<=10){
+    document.write('Sobresaliente');
+}else{
+    alert ('nota erronea');
+}
+
+}}while(!isNaN(x));
+
+</script>
+</body>
+</html>

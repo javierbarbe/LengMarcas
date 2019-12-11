@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+</head>
+<body>
+    <script type="text/javascript"> 
+var x;
+var texto = prompt ('introduzca un texto',''); 
+document.write(texto.length + '<br>');
+var c=texto.length-texto.replace(/a/gi,"").length;
+document.write('la frase '+texto+'<br>'+'Contiene la letra a ' + c+ ' veces '+ '<br>');
+
+function cuentaVocales(str){
+    var cuentaVoc=0;
+    var string= str.toString();
+     for (var i =0; i<string.length; i++){
+         if (string.charAt(i)=="a"|| string.charAt(i)=="e"|| string.charAt(i)=="i"|| string.charAt(i)=="o" || string.charAt(i)=="u"){
+             cuentaVoc+=1;
+         }
+     }
+     return cuentaVoc;
+}
+</script>
+</body>
+</hmtl>

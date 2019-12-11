@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body><script type="text/javascript">  
+function cargar(dinero){  
+      var f;
+    var v;  
+      for(f=0;
+       f<dinero.length; f++){
+                 v=prompt('Ingrese sueldo:','');  
+                     dinero[f]=parseInt(v); 
+                        } 
+                         }  
+
+
+         function calcularGastos(money) {   
+               var total=0; 
+                var f;  
+               for(f=0; f<money.length; f++){  
+                total=total+money[f]; 
+                       }  
+                  document.write('Listado de sueldos<br>'); 
+                 for(f=0; f<money.length; f++)
+                {   
+                  document.write(money[f]+'<br>');  
+                }    
+                 document.write('Total de gastos en sueldos:'+total); 
+              } 
+ var sueldos; 
+  sueldos=new Array(5); 
+   cargar(sueldos); 
+    calcularGastos(sueldos);
+    </script></body></html>

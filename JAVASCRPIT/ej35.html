@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+</head>
+<body>
+    <script type="text/javascript">
+    var x, y, z, cuad1=0,cuad2=0,cuad3=0,cuad4=0;
+    z=prompt('introduce el numero de veces que quieres introducir coordenadas', '');
+    for (q=0; q<z; q++){
+    x=prompt('introduce coordenada x','');
+    y=prompt('introduce coordenada y', '');
+    x=parseInt(x);
+    z=parseInt(z);
+    y=parseInt(y);
+   
+    if(x>0 && y>0){
+       
+        cuad1++;
+    }else if (x<0 &&y<0){
+        
+        cuad2++;
+
+    }else if (x<0 && y<0){
+
+        
+        cuad3++;
+    } else if (x>0 && y <0) {
+     
+        cuad4++;
+    }
+    
+    
+    }
+    document.write ('cantidad de valores del primer cuadrante '+ cuad1+ '<br>');
+    document.write ('cantidad de valores del segundo cuadrante '+ cuad2+ '<br>');
+    document.write ('cantidad de valores del tercer cuadrante '+ cuad3 + '<br>');
+    document.write ('cantidad de valores del cuarto cuadrante '+ cuad4+ '<br>');
+    </script>
+
+    </body>
+    </html>

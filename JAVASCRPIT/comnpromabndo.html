@@ -1,0 +1,24 @@
+<html> 
+<head> 
+   <title>Cambiar el valor por defecto</title> 
+   <script> 
+    function cambiaDefecto(){ 
+	document.miFormulario.campo1.value = "Hola!!" ;	
+    }  
+    function long(){
+        var cadena= document.miFormulario.campo1.value;
+        var longitud = cadena.length; 
+        alert ('la longitud de ' + cadena+ ' es '+ longitud);
+    }
+    function 
+   </script> 
+</head>
+<body> <form name="miFormulario" action="#" method="post" enctype="text/plain"> 
+<input type="text" name="campo1" value="" size="12" onblur="long()"> 
+<input type="reset"> 
+<br> 
+<br> 
+<input type="button" value="Cambia valor por defecto" onClick="cambiaDefecto()"> 
+</form> 
+</body> 
+</html>

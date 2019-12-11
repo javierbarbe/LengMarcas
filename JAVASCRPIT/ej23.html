@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+</head>
+<body>
+    
+<script type="text/javascript">
+var x, nombre; 
+x=prompt('introduce tu edad', '');
+x=parseFloat(x);
+nombre=prompt('por favor introduce nombre','');
+if (nombre==''){
+    alert('no has introducido nombre');
+}else {
+    alert('Hola '+nombre+'. Bienvenido a esta pagina web');
+}
+if(x<=10){
+    document.write('Eres un niño');
+}else if(x<18){
+    document.write('Eres un jovencito');
+}else if(x<90){
+    document.write('Eres mayor de edad');
+}else {
+    document.write('Tienes muchos años encima...');
+
+}
+</script>
+</body>
+</html>
