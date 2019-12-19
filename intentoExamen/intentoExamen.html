@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<head> <title> Examen</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+   <link rel="stylesheet" type="text/css" href="./intentoExamen.css">
+</head>
+  <body> 
+  <div id="contenedor">
+    <form method="get" action="destino.php">
+        <h1> EXAMEN LM PRIMERA EVALUACION DAW</h1>
+        <div id="fila">
+            <div >
+                <fieldset id="derecha"> 
+                        <legend> Nombre y apellidos</legend>
+                        <input type="text" name="nombr" id="nombre"><br>
+                        Nombre<br>
+                        <input type="text" name="apell" id="apellidos"><br>
+                        Apellidos<br>
+                        <input type="text" name="dnacional" id="dni"><br>
+                        DNI
+                </fieldset>
+            </div>
+                <fieldset >
+                    <legend>Direccion</legend>
+                    <input type="text" name="calle" id="calleNum"><br>
+                    Calle, numero, piso, puerta <br>
+                    <div id="dobleCaja">
+
+                     
+
+                        <div id="derecha" style="width: 40%;">
+                            <input type="text"  name="codPos" id="codPostal" style="width: 80%;"><br>
+                            Codigo Postal
+                        </div>
+                        <div id="derecha" style="width: 40%;">
+                            <input type="text" class="medioDerecha" name="muni" id="municipio" style="width: 80%; " ><br>
+                            Municipio
+                        </div>
+                    </div>
+                    <div >
+                                <div id="derecha" style="width: 40%;">
+                                        <select  name="provin" id="provincia">
+                                            <option value="0" selected> </option>
+                                            <option value="1"> Provincia 1</option>
+                                            <option value="2"> Provincia 2</option>
+                                            <option value="3"> Provincia 3</option>
+                                        </select><br>
+                                        Provincia
+
+                                    
+                                </div>
+                                <div id="derecha" style="width: 40%;">
+                                        <select  name="provin" id="provincia">
+                                            <option value="0" selected> </option>
+                                            <option value="1"> Pais 1</option>
+                                            <option value="2"> Pais 2</option>
+                                            <option value="3"> Pais 3</option>
+                                        </select><br>
+                                        Pais
+                                </div>
+                        </div>
+                    </fieldset>
+
+
+        </div>
+        <div id="fila">
+            <fieldset id="derecha">
+                <legend>Correo Electronico</legend>
+                <input type="text" name="correo" id="corrElect"><br>
+                Email
+            </fieldset>
+             <div >
+                    <fieldset >
+                        <legend>Telefono</legend>
+                        <div id="dobleCaja">
+                            <div id="derecha" style="width: 40%;">
+                                <input type="text" name="fij" id="fijo" style="width: 80%;"><br>
+                                Fijo
+                            </div>
+                            <div id="derecha" style="width: 40%;">
+                                <input type="text" name="mvl" id="movil" style="width: 80%;"><br>
+                                Movil
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+             </div>
+
+        </div>
+
+
+</form>
+</div>
+
+   </body>
+</html>

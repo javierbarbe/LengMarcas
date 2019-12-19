@@ -1,0 +1,13 @@
+form{
+    width: 80%;
+    margin: auto;
+}
+
+fieldset{
+    width: 45%;
+    margin: auto;
+}
+
+#derecha{
+    float: left;
+}
