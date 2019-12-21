@@ -4,6 +4,10 @@
 	background-color:#CFC
 }
 
+input, select{
+	border-color: blue;
+}
+
 .grande{
     width: 90%;
 }
@@ -17,6 +21,10 @@
     float: left;
     width: 45%;
 }
+input:hover, select:hover{
+	border-color: red;
+}
+
 
 .fila{
 	float:left;

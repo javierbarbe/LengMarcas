@@ -100,11 +100,11 @@
                 <legend>Contraseña</legend>
                 <div class="izquierda">
                     Introduce contraseña<br>
-                    <input type="password" name="contra" id="contrasenia" onchange="revisaCont();">
+                    <input type="password" name="contra" id="contrasenia" onchange="revisaCont();" onkeypress="comparaCont();">
                 </div>
                 <div class="derecha">
                     Repite contraseña<br>
-                    <input type="password" name="repiCont" id="contrasenia2" onchange="comparaCont();">
+                    <input type="password" name="repiCont" id="contrasenia2" onkeypress="comparaCont();">
                 </div>
             </fieldset>
             </div>
