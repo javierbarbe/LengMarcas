@@ -3,42 +3,41 @@
 <head> <title> Examen</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
    <link rel="stylesheet" type="text/css" href="./intentoExamen.css">
+   <script type="text/javascript" src="./examenjs.js"></script> 
 </head>
   <body> 
   <div id="contenedor">
     <form method="get" action="destino.php">
-        <h1> EXAMEN LM PRIMERA EVALUACION DAW</h1>
-        <div id="fila">
-            <div >
-                <fieldset id="derecha"> 
+        <h1 style="text-align:center;"> EXAMEN LM PRIMERA EVALUACION DAW</h1>
+        <div  class="fila">
+            <div class="izquierda">
+                <fieldset > 
                         <legend> Nombre y apellidos</legend>
-                        <input type="text" name="nombr" id="nombre"><br>
+                        <input type="text" name="nombr" id="nombre" class="grande"><br>
                         Nombre<br>
-                        <input type="text" name="apell" id="apellidos"><br>
+                        <input type="text" name="apell" id="apellidos" class="grande"><br>
                         Apellidos<br>
-                        <input type="text" name="dnacional" id="dni"><br>
+                        <input type="text" name="dnacional" id="dni" class="grande"><br>
                         DNI
                 </fieldset>
             </div>
+            <div class="derecha">
                 <fieldset >
                     <legend>Direccion</legend>
-                    <input type="text" name="calle" id="calleNum"><br>
+                    <input type="text" name="calle" id="calleNum" class="grande"><br>
                     Calle, numero, piso, puerta <br>
-                    <div id="dobleCaja">
-
-                     
-
-                        <div id="derecha" style="width: 40%;">
+                    <div class="dobleCaja">
+                        <div  class="izquierda">
                             <input type="text"  name="codPos" id="codPostal" style="width: 80%;"><br>
                             Codigo Postal
                         </div>
-                        <div id="derecha" style="width: 40%;">
+                        <div class="derecha">
                             <input type="text" class="medioDerecha" name="muni" id="municipio" style="width: 80%; " ><br>
                             Municipio
                         </div>
                     </div>
-                    <div >
-                                <div id="derecha" style="width: 40%;">
+                    <div class="dobleCaja" >
+                                <div  class="izquierda">
                                         <select  name="provin" id="provincia">
                                             <option value="0" selected> </option>
                                             <option value="1"> Provincia 1</option>
@@ -48,49 +47,76 @@
                                         Provincia
 
                                     
-                                </div>
-                                <div id="derecha" style="width: 40%;">
-                                        <select  name="provin" id="provincia">
+                                </div> <!-- aqui cierro  el select de Provincias a la izquierda -->
+                                <div  class="derecha">
+                                        <select  name="paiS" id="pais">
                                             <option value="0" selected> </option>
                                             <option value="1"> Pais 1</option>
                                             <option value="2"> Pais 2</option>
                                             <option value="3"> Pais 3</option>
                                         </select><br>
                                         Pais
-                                </div>
-                        </div>
+                                </div> <!-- aqui cierro  el select de paises a la  derecha -->
+                        </div> <!-- aqui cierro  el bloque de dos input -->
                     </fieldset>
-
-
-        </div>
-        <div id="fila">
-            <fieldset id="derecha">
-                <legend>Correo Electronico</legend>
-                <input type="text" name="correo" id="corrElect"><br>
-                Email
-            </fieldset>
-             <div >
+            </div> <!-- aqui cierro  el bloque derecha -->
+        </div> <!-- aqui cierro  la primera fila -->
+        
+        <div class="fila">
+  				<div class="izquierda">
+                    <fieldset >
+                        <legend>Correo Electronico</legend>
+                        <input type="text" name="correo" id="corrElect" class="grande"><br>
+                        Email
+                    </fieldset>
+                </div>      <!-- aqui cierro  el bloque izquierda correoElectronico -->
+               <div class="derecha">
                     <fieldset >
                         <legend>Telefono</legend>
-                        <div id="dobleCaja">
-                            <div id="derecha" style="width: 40%;">
-                                <input type="text" name="fij" id="fijo" style="width: 80%;"><br>
+                       
+                            <div class="izquierda" >
+                                <input type="text" name="fij" id="fijo" ><br>
                                 Fijo
-                            </div>
-                            <div id="derecha" style="width: 40%;">
-                                <input type="text" name="mvl" id="movil" style="width: 80%;"><br>
+                            </div>  <!-- aqui cierro  el div fijo a la izquierda -->
+                            <div class="derecha" >
+                                <input type="text" name="mvl" id="movil"  ><br>
                                 Movil
-                            </div>
-                        </div>
-
+                            </div> <!-- aqui cierro  el div movil a la derecha -->
                     </fieldset>
+                    
+                </div>  <!-- aqui cierro  el bloque derecha  telefono-->
 
-             </div>
-
+        </div> <!-- aqui cierro  el bloque fila 2 -->
+		<div class="fila"> 
+        	<div class="izquierda"> 
+            <fieldset>
+                    <legend>Turno</legend>
+                    <input type="radio" name="turn" checked="checked">Mañana<br>
+                    <input type="radio" name="turn"> Tarde
+             </fieldset>
+            </div>
+            <div class="derecha">
+                <fieldset>
+                <legend>Contraseña</legend>
+                <div class="izquierda">
+                    Introduce contraseña<br>
+                    <input type="password" name="contra" id="contrasenia" onchange="revisaCont();">
+                </div>
+                <div class="derecha">
+                    Repite contraseña<br>
+                    <input type="password" name="repiCont" id="contrasenia2" onchange="comparaCont();">
+                </div>
+            </fieldset>
+            </div>
         </div>
+        <div class="fila"> 
+            <input type="button" name="env" onclick="enviar();" value="Guardar">
+            <input type="reset"  name="elimina" value="Limpiar">
+
+        </div >
 
 
-</form>
+    </form>
 </div>
 
    </body>

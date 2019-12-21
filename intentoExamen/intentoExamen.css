@@ -1,13 +1,32 @@
-form{
+#contenedor{
     width: 80%;
     margin: auto;
+	background-color:#CFC
 }
 
-fieldset{
+.grande{
+    width: 90%;
+}
+
+.derecha {
+    float: right;
     width: 45%;
-    margin: auto;
 }
 
-#derecha{
+.izquierda{
     float: left;
+    width: 45%;
 }
+
+.fila{
+	float:left;
+	width:90%;
+	padding-top:10px;
+	margin:auto;
+	
+	}
+	.fila:hover{
+		background-color:#C3C}
+	body{
+		background-color:#999;
+		}
