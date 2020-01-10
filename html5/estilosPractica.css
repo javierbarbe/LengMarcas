@@ -85,3 +85,13 @@ footer{
     float: right; 
     margin-right: 30%; 
 }
+#css3,#js,#html5{
+    height: 200px;
+}
+.sombra:hover{
+    height: 200px;
+    background-color: tan;
+}
+.sombra{
+    padding: 10px 0px;
+}
