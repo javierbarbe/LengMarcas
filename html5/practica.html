@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="estilosPractica.css"/>
+  <!-- <script src="code.js"> </script> -->
+<title> practicaHTML5</title>
+</head>
+<body>
+
+<form action="destino.php" method="POST" >
+        <div id="contenedor">
+            <header >
+                    <img id="logo" src="https://img.over-blog-kiwi.com/1/33/14/76/20180206/ob_a0ced7_w3school.jpg" alt="W3SCHOOLS"  >
+                    <h1>FORMULARIO HTML5</h1>
+                </header>
+                <section>
+                    <span class="letraRojo">Los campos coloreados son obligatorios.</span><br>
+                    <section>
+                        <fieldset>
+                            
+                                <legend>Datos de la aplicacion</legend>
+                             <!-- <br><br><br>  -->
+                           <div  style="margin-top: 10%;"> 
+                                <span class="letraRojo" id="user">Usuario</span>  
+                                <input class="caja" type="text" name="fname" placeholder="Usuario" >
+                            </div><br>
+                           <div> 
+                                <span class="letraRojo" id="pass1">Contraseña</span>
+                                <input class="caja" type="password" name="fcontrasenia" placeholder="Contraseña" >
+                           </div><br> 
+                           <div>
+                               <span class="letraRojo" id="pass2">Repite Contraseña</span>
+                               <input class="caja" type="password" name="fcontrasenia2" placeholder="Repita Contraseña"" >
+                           </div>
+                        </fieldset>
+                    </section>
+                    <aside>
+                        <fieldset>
+                            <legend>Datos del Usuario</legend>
+                            <div>
+                                <span class="letraMorada">Nombre</span>
+                                <input class="caja" type="text" name="uname" placeholder="Nombre" >
+                            </div><br>
+                            <div>
+                                <span class="letraMorada">Primer Apellido</span>
+                                <input class="caja" type="text" name="uApellido1" placeholder="Primer Apellido" >
+                            </div><br>
+                            <div>
+                                <span class="letraMorada">Segundo Apellido</span>
+                                <input class="caja" type="text" name="uApellido2" placeholder="Segundo Apellido" >
+                            </div><br>
+                            <div>
+                                <span class="letraMorada">Fecha Nacimiento</span>
+                                <input class="caja" type="date" name="fechNac">
+                            </div><br>
+                        </fieldset>
+                    </aside>
+                    <section>
+                        <fieldset>
+                            <legend>Direccion</legend>
+                            <div>
+                                Calle,numero,piso,p
+                                <input type="text" class="caja" name="direc" placeholder="Direccion completa">
+                            </div><br>
+                            <div>
+                                Codigo Postal
+                                <input type="text" class="cajaPeque" name="cPost" placeholder="Código Postal">
+                            </div><br>
+                            <div>
+                                Municipio
+                                <input type="text" class="cajaMed" name="Muni" placeholder="Municipio">
+                            </div><br>
+                            <div>
+                                Provincia
+                                <input list="provincia" class="cajaPeque">
+                                    <datalist id="provincia">
+                                        <option value="Madrid">
+                                        <option value="Guadalajara">
+                                        <option value="Toledo">
+                                        <option value="Salamanca">
+                                        <option value="León">
+                                    </datalist> 
+                            </div><br>
+                            <div>
+                                País
+                                <input list="pais" class="cajaMed">
+                                    <datalist id="pais">
+                                        <option value="España">
+                                        <option value="Alemania">
+                                        <option value="Inglaterra">
+                                        <option value="Usa">
+                                        <option value="China">
+                                    </datalist> 
+
+                            </div>
+                        </fieldset>
+                    </section>
+                    <aside>
+                        <fieldset>
+                            <legend>Info de Contacto</legend>
+                            <div>
+                                <span class="letraRojo"> Email</span>
+                                <input type="email" class="caja" placeholder="Email">
+                            </div><br>
+                            <div>
+                                Telefono fijo
+                                <input type="tel" class="cajaMed" placeholder="Tel. Fijo">
+                            </div><br>
+                            <div>
+                                Telefono Movil
+                                <input type="tel" class="cajaMed" placeholder="Tel. Movil">
+                            </div><br><br>
+                        </fieldset>
+                    </aside>
+                    <footer>
+                        <fieldset>
+                            <legend>Otros Datos</legend>
+                            Carnet de Conducir<br>
+                            <input type="radio" name="carnet" value="Sí">Sí
+                            <input type="radio" name="carnet" value="No">No
+                        </fieldset>
+                    </footer>
+                    <footer>
+                        <fieldset>
+                            Comentario<br>
+                            <textarea rows="4" cols="115"></textarea>
+                        </fieldset>
+                    </footer>
+                  
+                </section>
+                <aside>
+                        <h1> ASIDE</h1>
+                </aside>
+                <footer class="pie">
+                        Javier Barbero Siesto
+                </footer>
+        </div>  
+</form>
+
+</body>
+</html>
