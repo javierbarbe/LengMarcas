@@ -95,3 +95,14 @@ footer{
 .sombra{
     padding: 10px 0px;
 }
+#botones{
+    margin-left: 80%;
+}
+ #menuOculto,#menuOculto2{
+    display: none;
+    float: right;
+     text-align: center;
+    
+     margin-left: 60%;
+ }
+ 
