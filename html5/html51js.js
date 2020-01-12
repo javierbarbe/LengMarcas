@@ -5,7 +5,7 @@ function compruebaTo(){
          nomComp=1;
     }else{
         alert('por favor Nombre no puede quedar vacio');
-        document.getElementById('user').focus();
+        document.getElementById('nombre').focus();
     }
     var ape1Comp=0;
     var ape1= document.getElementById('apellido1').value;
@@ -13,6 +13,7 @@ function compruebaTo(){
         ape1Comp=1;
     }else{
         alert('por favor Apellido1 no puede quedar vacio');
+        
     }
     var ape2Comp=0;
     var ape2= document.getElementById('apellido2').value;
@@ -21,7 +22,22 @@ function compruebaTo(){
     }else{
         alert('por favor Apellido2 no puede quedar vacio');
     }
-    
+    if (nomComp!=0){
+        alert('nombre relleno');
+        if(ape1Comp!=0){
+            alert('apellido1 relleno');
+            if(ape2Comp!=0){
+                alert('apellido2 relleno');
+                document.getElementById('areaComentario').value="Datos introducidos correctamente";
+            } else{
+                document.getElementById('areaComentario').value="Datos introducidos INCORRECTOS";
+            }
+        }else{
+            document.getElementById('areaComentario').value="Datos introducidos INCORRECTOS";
+        }
+    }else{
+        document.getElementById('areaComentario').value="Datos introducidos INCORRECTOS";
+    }
 
 /* var Comp=0;
     var contra= document.getElementById('pass1').value;

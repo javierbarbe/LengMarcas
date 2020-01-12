@@ -21,39 +21,47 @@ header{
   
 }section section{
     /* text-align: center; */
-    width: 50%;
-    border:blue solid 1px;
-    display: inline-block;
+    float: left;
+    width: 49%;
+    margin-left: 1%;
+    /* border:blue solid 1px; */
+    /* display: inline-block; */
     margin-top: 5px;
 }
 section{
     /* text-align: center; */
     width: 70%;
-    border:blue solid 1px;
-    display: inline-block;
+    /* border:blue solid 1px; */
+    /* display: inline-block; */
     background-color: lightgrey;
+    float: left;
+    
 }
 section aside{
-    width: 48%;
-    border:blue solid 1px;
+    width: 49%;
+    /* border:blue solid 1px; */
      text-align: left; 
-    display: inline-block;
+    /* display: inline-block; */
     margin-top: 5px;
+    
 }
 aside{
-    width: 29%;
-    border:blue solid 1px;
+    width: 30%;
+    /* border:blue solid 1px; */
     text-align: center;
     display: inline-block;
+    clear: both;
 }
 section footer{
-    width: 99.7%;
+    width: 98%;
+    margin: auto;
     /* border:red solid 1px; */
     /* text-align: center; */
 }
 footer{
     width: 100%;
-    border:blue solid 1px;
+    /* border:blue solid 1px; */
+    clear: both;
       
 }
 .pie{
@@ -111,4 +119,8 @@ footer{
 #carnetCaja{
     float: left;
 
+}
+
+#areaComentario{
+    width: 60%;
 }
