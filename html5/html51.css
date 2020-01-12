@@ -1,0 +1,114 @@
+#logo{
+    float: left; 
+    padding: 10px;
+    width: 10%;
+    height: 10%;
+}
+#contenedor{
+    padding: 8px;
+    width: 98%;
+    border:blue solid 2px;
+    margin: auto;
+}
+
+header{
+    border:blue solid 2px;
+    width: 100%; 
+    margin: auto;
+    text-align: center;
+    background-color: lightseagreen;
+    color:white;
+  
+}section section{
+    /* text-align: center; */
+    width: 50%;
+    border:blue solid 1px;
+    display: inline-block;
+    margin-top: 5px;
+}
+section{
+    /* text-align: center; */
+    width: 70%;
+    border:blue solid 1px;
+    display: inline-block;
+    background-color: lightgrey;
+}
+section aside{
+    width: 48%;
+    border:blue solid 1px;
+     text-align: left; 
+    display: inline-block;
+    margin-top: 5px;
+}
+aside{
+    width: 29%;
+    border:blue solid 1px;
+    text-align: center;
+    display: inline-block;
+}
+section footer{
+    width: 99.7%;
+    /* border:red solid 1px; */
+    /* text-align: center; */
+}
+footer{
+    width: 100%;
+    border:blue solid 1px;
+      
+}
+.pie{
+    text-align: center; 
+     background-color: blue;
+     color: white;
+}
+
+.caja{
+    /* display: inline-block; */
+   float: right;
+   margin-right: 15%;
+   /* size: 300px; */
+   width: 50%;
+}
+.letraRojo{
+    color: red;
+}
+.letraMorada{
+    color:purple;
+}
+.cajaPeque{
+    width: 20%;
+     float: right; 
+    margin-right: 45%; 
+}
+.cajaMed{
+    width: 35%;
+    float: right; 
+    margin-right: 30%; 
+}
+#css3,#js,#html5{
+    height: 200px;
+}
+.sombra:hover{
+    height: 200px;
+    background-color: tan;
+}
+.sombra{
+    padding: 10px 0px;
+}
+#botones{
+    margin-left: 80%;
+}
+ #cochePropio,#menuColor,#marcaCoche{
+    display: none;
+    /* size: 15%; */
+    float: left;
+     /* display: inline-block; */
+    /* color: darkgreen; */
+     margin-left: 15%;
+    /* border: 2px black solid; */
+}
+
+#carnetCaja{
+    float: left;
+
+}
