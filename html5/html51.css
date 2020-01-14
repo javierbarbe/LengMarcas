@@ -1,8 +1,13 @@
 #logo{
     float: left; 
-    padding: 10px;
+   margin:15px;
     width: 10%;
     height: 10%;
+	border:blue solid 3px;
+	border-radius:8px;
+	box-shadow: 5px 5px rgb(119, 153, 147) ;
+	-webkit-transform:scale(0.8);
+	
 }
 #contenedor{
     padding: 8px;
@@ -18,6 +23,8 @@ header{
     text-align: center;
     background-color: lightseagreen;
     color:white;
+	text-shadow:#600 1px 1px 1px;
+	
   
 }section section{
     /* text-align: center; */
@@ -62,6 +69,7 @@ footer{
     width: 100%;
     /* border:blue solid 1px; */
     clear: both;
+	max-width:100%;
       
 }
 .pie{
@@ -73,7 +81,7 @@ footer{
 .caja{
     /* display: inline-block; */
    float: right;
-   margin-right: 15%;
+   margin-right: 10%;
    /* size: 300px; */
    width: 50%;
 }
@@ -85,13 +93,13 @@ footer{
 }
 .cajaPeque{
     width: 20%;
-     float: right; 
-    margin-right: 45%; 
+    float: right; 
+    margin-right: 40%; 
 }
 .cajaMed{
     width: 35%;
     float: right; 
-    margin-right: 30%; 
+    margin-right: 25%; 
 }
 #css3,#js,#html5{
     height: 200px;
@@ -99,6 +107,10 @@ footer{
 .sombra:hover{
     height: 200px;
     background-color: tan;
+	/* background-color: -moz-linear-gradient(center #FF0 tan);
+	background: -webkit-circle-gradient (center #FF0 tan); 
+	background: -moz-linear-gradient(top, tan, rgb(98, 124, 194));*/
+
 }
 .sombra{
     padding: 10px 0px;
@@ -123,4 +135,5 @@ footer{
 
 #areaComentario{
     width: 60%;
+	max-width:80%;
 }
