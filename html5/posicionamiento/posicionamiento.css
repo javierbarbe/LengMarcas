@@ -1,0 +1,22 @@
+img{
+   
+    border: 1px solid blue;
+    width: 32.5%;
+    margin: 0px;
+    /* height: 100%; */
+    
+}
+div{
+    border: 10px solid blue;
+    width: 100%;
+    /* padding: 10px; */
+}
+
+article{
+    display: inline;
+    padding: 10px;
+    border: blueviolet 2px solid;
+    /* width: 30%; */
+    /* float: left; */
+ 
+}
