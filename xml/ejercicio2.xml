@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE restaurante[
-    <!ELEMENT restaurante (recetas)*>
-    <!ELEMENT recetas (nombre,ingrediente+,comensales,pasos)>
+    <!ELEMENT restaurante (receta)*>
+    <!ELEMENT receta (nombre,ingrediente+,comensales,pasos)>
     <!ELEMENT pasos (paso)+>
     <!ELEMENT paso (#PCDATA)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT ingrediente (#PCDATA)>
-    <!ELEMENT comensales (#PCDATA) #REQUIRED>
+    <!ELEMENT comensales (#PCDATA) >
+    <!ATTLIST receta comensales CDATA>
+    <!ATTLIST ingrediente cantidad CDATA>
     
 ]>
 <restaurante>
-    <recetas>
+    <receta comensales="4">
             <nombre>Sopa de Cebolla</nombre>
            
                 <ingrediente>1kg Cebolla</ingrediente>
-                <ingrediente> 2 l. de caldo de carne.</ingrediente>
-                <ingrediente> 100 gr. mantequilla.</ingrediente>
-                <ingrediente>1 cucharada de harina.</ingrediente>
+                <ingrediente cantidad="2 l.">  Caldo de carne.</ingrediente>
+                <ingrediente cantidad=" 100 gr">  Mantequilla.</ingrediente>
+                <ingrediente cantidad="1 cucharada  "> Harina.</ingrediente>
                 <ingrediente>100 gr. de queso emmental suizo o gruyére rallado.</ingrediente>
                 <ingrediente>Pan tostado en rebanadas.</ingrediente>
                 <ingrediente>Tomillo.</ingrediente>
@@ -32,6 +34,6 @@
                 <paso>Dejar cocer a fuego lento durante unos 15 minutos.</paso>
                 <paso>Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.</paso>
             </pasos>
-    </recetas>
+    </receta>
 
 </restaurante>
