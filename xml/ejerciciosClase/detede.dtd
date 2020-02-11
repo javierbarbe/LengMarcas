@@ -1,0 +1,33 @@
+<!ELEMENT ciclo (modulo)*>
+<!ELEMENT modulo (horas_semanales,obligatorio?,duracion,alumnos+)>
+<!ELEMENT horas_semanales (#PCDATA)>
+
+<!ELEMENT obligatorio EMPTY>
+<!ELEMENT duracion (inicio,finalizacion)>
+<!ELEMENT inicio (anio,mes,dia)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+<!ELEMENT finalizacion (anio,mes,dia)>
+ 
+
+<!ELEMENT alumnos (alumno)+>
+<!ELEMENT alumno (nombre,apellidos, nif, telefono,email,direccion,info)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT ingrediente (#PCDATA)>
+    <!ELEMENT nif EMPTY>
+    <!ELEMENT telefono EMPTY>
+    <!ELEMENT email EMPTY>
+    <!ELEMENT direccion (calle,numero,ciudad,cpostal)>
+        <!ELEMENT calle (#PCDATA)>
+        <!ELEMENT numero (#PCDATA)>
+        <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT cpostal (#PCDATA)>
+    <!ELEMENT info (#PCDATA)>
+
+<!ATTLIST modulo nombre CDATA #REQUIRED>
+<!ATTLIST nif dni CDATA #REQUIRED>
+<!ATTLIST telefono movil CDATA #REQUIRED>
+
+<!ATTLIST email Email CDATA #REQUIRED>

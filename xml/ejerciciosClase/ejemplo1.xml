@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE agenda SYSTEM "agenda.dtd">
+<agenda>
+        <persona>
+                    <nombre>Perico</nombre>
+                    <apellido> El de los Palotes</apellido>
+                    <direccion>C/el empecinado</direccion>
+                    <telefonos> 
+                            <fijo>91 856 35 14</fijo>
+                            <movil>657 123 845</movil>
+                            <trabajo>98 745 12 32</trabajo>
+                    </telefonos>
+       </persona> 
+</agenda>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE ciclo SYSTEM "detede.dtd">
+<ciclo >
+    <modulo nombre="Lenguaje de Marcas">
+        <horas_semanales >4</horas_semanales>
+        <obligatorio/>
+        <duracion>
+            <inicio>
+                <anio>2010</anio>
+                <mes>Septiembre</mes>
+                <dia>15</dia>
+            </inicio>
+            <finalizacion>
+             
+                <anio>2011</anio>
+                <mes>Junio</mes>
+                <dia>30</dia>
+            </finalizacion>
+        </duracion>
+        <alumnos>
+            <alumno>
+                <nombre> Ana</nombre>
+                <apellidos>Fernandez Gutiérrez</apellidos>
+                <nif dni="16965696L"/>
+                <telefono movil="789654321"/>
+                <email Email="ana.fdezgtrrez@hotmail.com" />
+                <direccion>
+                    <calle>C/El Percebe</calle>
+                    <numero>13</numero>
+                    <ciudad>Santander</ciudad>
+                    <cpostal>39302</cpostal>
+                </direccion>
+                <info>No hay información sobre las faltas de asistencia o sus notas hasta el momento.</info>
+            </alumno>
+            <alumno>
+                <nombre> Pepito</nombre>
+                <apellidos> Grillo</apellidos>
+                <nif dni="98765432H"/>
+                <telefono movil="656566555"/>
+                <email Email="yhyh@yahoo.com" />
+                <direccion>
+                    <calle> Avd. El Pez</calle>
+                    <numero>5</numero>
+                    <ciudad>Suances</ciudad>
+                    <cpostal>39401</cpostal>
+                </direccion>
+                <info>Su nota es "apto" y no tiene faltas de asistencia</info>
+            </alumno>
+        </alumnos>
+    </modulo>
+</ciclo>

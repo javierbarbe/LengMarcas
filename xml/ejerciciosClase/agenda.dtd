@@ -1,0 +1,9 @@
+<!ELEMENT agenda(persona)*>
+<!ELEMENT persona(nombre,apellido,direccion,telefonos)>
+<!ELEMENT telefonos(fijo ?,movil +,trabajo *)> <!-- permite tener uno o mas de un movil, o mas de un telefono de trabajo, fijo 0 alguno-->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT fijo (#PCDATA)>
+<!ELEMENT movil (#PCDATA)>
+<!ELEMENT trabajo (#PCDATA)>
