@@ -1,6 +1,13 @@
-<!ELEMENT persona (nombre,nacimiento?,direccion+,varon)>
+<!ELEMENT gente  (persona+)>
+<!ELEMENT persona (nombre,nacimiento?,direccion+,varon?)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT nacimiento EMPTY>
     <!ATTLIST nacimiento dia CDATA #REQUIRED> 
     <!ATTLIST nacimiento mes CDATA #REQUIRED> 
-    <!ATTLIST nacimiento anyo CDATA #REQUIRED> 
+    <!ATTLIST nacimiento anyo CDATA #REQUIRED>
+<!ELEMENT direccion (calle,poblacion,provincia,cpostal)>
+    <!ELEMENT calle  (#PCDATA)>
+    <!ELEMENT poblacion  (#PCDATA)>
+    <!ELEMENT provincia  (#PCDATA)>
+    <!ELEMENT cpostal  (#PCDATA)>
+<!ELEMENT varon  EMPTY>

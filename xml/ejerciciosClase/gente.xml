@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gente SYSTEM "nacimientosd.dtd">
+<gente>
+    <persona>
+        <nombre>Juan Pardo</nombre>
+        <nacimiento dia="10" mes="Abril" anyo="1982"/>
+        <direccion>
+            <calle>Caoba</calle>
+            <poblacion> Madrid</poblacion>
+            <provincia>Madrid</provincia>
+            <cpostal>25542</cpostal>
+
+        </direccion>
+        <varon/>
+    </persona>
+    <persona>
+        <nombre>Juana de Arco</nombre>
+        <nacimiento dia="10" mes="Julio" anyo="1482"/>
+        <direccion>
+            <calle>Caoba</calle>
+            <poblacion> Paris</poblacion>
+            <provincia>Paris</provincia>
+            <cpostal>36524</cpostal>
+
+        </direccion>
+      
+    </persona>
+
+
+</gente>
