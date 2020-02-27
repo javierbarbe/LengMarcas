@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos SYSTEM "./pedidos.dtd">
+<pedidos>
+    <pedido codigo="E1234567"  plazo_revision="depende del precio del producto">
+        
+        <trabajador nombre=""/>
+        <fecha dia="" mes="" anio=""/>
+        <observaciones valor="urgente"> hola</observaciones>
+        <articulo cod_articulo=" ">
+           <n_unidades cantidad=""/>
+           <precio></precio>
+           <observaciones></observaciones>
+        </articulo>
+
+    </pedido>
+</pedidos>
