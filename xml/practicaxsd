@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="pedidos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="pedido" maxOccurs="unbounded">
+                <xs:attribute name="codigo" type="codigoLetra*">
+                <xs:attribute name="observaciones" >
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="urgente| incompleto"/>   
+                     </xs:restriction>
+                </xs:attribute>
+                <xs:attribute name="plazo_revision" type="xs:string">
+                <xs:complexType>
+                      <xs:sequence>
+                            <xs:element name="trabajador">
+                                <xs:attribute name="nombre" type="palabra*"/>
+                            </xs:element>
+                            <xs:element name="fecha">
+                                <xs:attribute name="dia" type="dia*"/>
+                                <xs:attribute name="mes" type="mes*"/>
+                                <xs:attribute name="anio" type="anio*"/>
+                            </xs:element>
+                            <xs:element name="observaciones" type="palabra*"/>
+                            <xs:element name="articulo">
+                                <xs:attribute name="cod_articulo" type="xs:integer">
+                                <xs:complexType>
+                                     <xs:sequence>
+                                        <xs:element name="n_unidades" type="xs:Positiveinteger"/>
+                                        <xs:element name="precio" type="xs:Positiveinteger"/>
+                                        <xs:element name="observaciones" type="palabra*"/>
+                            </xs:element>
+                    </xs:sequence>
