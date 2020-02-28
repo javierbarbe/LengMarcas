@@ -4,13 +4,13 @@
     <xs:complexType>
         <xs:sequence>
             <xs:element name="pedido" maxOccurs="unbounded">
-                <xs:attribute name="codigo" type="codigoLetra*">
+                <xs:attribute name="codigo" type="codigoLetra*"/>
                 <xs:attribute name="observaciones" >
                      <xs:restriction base="xs:string">
                         <xs:pattern value="urgente| incompleto"/>   
                      </xs:restriction>
                 </xs:attribute>
-                <xs:attribute name="plazo_revision" type="xs:string">
+                <xs:attribute name="plazo_revision" type="xs:string"/>
                 <xs:complexType>
                       <xs:sequence>
                             <xs:element name="trabajador">
@@ -31,3 +31,9 @@
                                         <xs:element name="observaciones" type="palabra*"/>
                             </xs:element>
                     </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
