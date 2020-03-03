@@ -2,6 +2,20 @@ TODO DOCUMENTO XML SCHEMA TINE QUE EMPEZAR ASI
     <?xml version="1.0" encoding="UTF-8"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="NOMBRE_RAIZ">
+LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NINGUN OTRO ELEMENTO
+     ELEMENTOS SIMPLES 
+          <xs:element name="nombreELEMENTO" type="xs:string"/>
+          SI AÑADO FIXED OBLIGO A QUE EL ELEMENTO SEA ESO
+            EJ: <xs:element name="mes" type="xs:string" fixed="agosto"/>
+          SI AÑADO DEFAULT SE PONE POR DEFECTO SI NO HAY NADA?
+            EJ: <xs:element name="mes" type="xs:string" default="agosto"/>
+   ATRIBUTOS
+         SI UN ELEMENTO TIENE ATRIBUTOS, YA NO ES SIMPLE, ES COMPLEJO
+                    <xs:element name="curso" type="xs:integer"/>
+                        <xs:complexType>
+                            <xs:attribute name="grupo" type="xs:string"/>
+                        </xs:complexType>
+                   </xs:element>
       
 
 PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
