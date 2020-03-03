@@ -33,6 +33,41 @@ LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NI
                         </xs:complexType>
                    </xs:element>
 
+
+
+        RESTRICCIONES SOBRE ELEMENTOS SIMPLES
+
+xs:length 	        Especifica una longitud fija.
+xs:minLength 	    Especifica una longitud mínima.
+xs:maxLength 	    Especifica una longitud máxima.
+xs:pattern 	        Especifica un patrón de caracteres admitidos.
+xs:enumeration 	    Especifica una lista de valores admitidos.
+xs:whiteSpace 	    Especifica cómo se debe tratar a los posibles espacios en blanco, las tabulaciones, los saltos de línea y los retornos de carro que puedan aparecer.
+xs:maxInclusive 	Especifica que el valor debe ser menor o igual que el indicado.
+xs:maxExclusive 	Especifica que el valor debe ser menor que el indicado.
+xs:minExclusive 	Especifica que el valor debe ser mayor que el indicado.
+xs:minInclusive 	Especifica que el valor debe ser mayor o igual que el indicado.
+xs:totalDigits 	    Especifica el número máximo de dígitos que puede tener un número.
+xs:fractionDigits   Especifica el número máximo de decimales que puede tener un número.
+RESTRICCION DEFINIDA DENTRO DEL ELEMENTO
+        <xs:element name="mes">
+           <xs:simpleType>
+              <xs:restriction base="xs:integer">
+                 <xs:minInclusive value="1"/>
+                 <xs:maxInclusive value="12"/>
+              </xs:restriction>
+           </xs:simpleType>
+        </xs:element>
+RESTRICCION GLOBAL (HIJA DE SCHEMA)
+<xs:element name="mes" type="numeroMes"/>
+
+<xs:simpleType name="numeroMes">
+   <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="12"/>
+   </xs:restriction>
+</xs:simpleType>
+
 PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
       <?xml version="1.0" encoding="UTF-8"?>
       <nombrePrimerElemento_del_xml(raiz) xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
