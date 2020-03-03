@@ -16,7 +16,11 @@ LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NI
                             <xs:attribute name="grupo" type="xs:string"/>
                         </xs:complexType>
                    </xs:element>
-      
+        SI LO DEFINO SIN ELEMENTOS, ES UN ELEMENTO VACIO, SOLO PUEDE TENER ATRIBUTOS
+      A LOS ATRIBUTOS, ADEMAS SE LES PUEDE PONER LOS CAMPOS (fixed= OBLIGA AL CONTENIDO DE UN ATRIBUTO A SER ESE fixed="mama"
+                                                            default= POR DEFECTO SI NO SE ESCRIBE NADA  default="papa"
+                                                            use="optional"=PUEDE ESTAR O NO (VALOR POR DEFECTO DEL ATRIBUTO)
+                                                            use="required" OBLIGA A ESTAR AL ATRIBUTO
 
 PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
       <?xml version="1.0" encoding="UTF-8"?>
