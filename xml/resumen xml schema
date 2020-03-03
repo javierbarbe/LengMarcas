@@ -1,0 +1,11 @@
+TODO DOCUMENTO XML SCHEMA TINE QUE EMPEZAR ASI 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="NOMBRE_RAIZ">
+      
+
+PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
+      <?xml version="1.0" encoding="UTF-8"?>
+      <nombrePrimerElemento_del_xml(raiz) xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="nombre_archivo.xsd">
+      <SIGUIENTEELEMENTO>
