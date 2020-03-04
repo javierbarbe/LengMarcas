@@ -49,6 +49,19 @@ xs:minExclusive 	Especifica que el valor debe ser mayor que el indicado.
 xs:minInclusive 	Especifica que el valor debe ser mayor o igual que el indicado.
 xs:totalDigits 	    Especifica el número máximo de dígitos que puede tener un número.
 xs:fractionDigits   Especifica el número máximo de decimales que puede tener un número.
+
+ENUMERACION // LISTA
+<xs:element name="color">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="verde"/>
+         <xs:enumeration value="amarillo"/>
+         <xs:enumeration value="rojo"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+
+
 RESTRICCION DEFINIDA DENTRO DEL ELEMENTO
         <xs:element name="mes">
            <xs:simpleType>
@@ -58,6 +71,19 @@ RESTRICCION DEFINIDA DENTRO DEL ELEMENTO
               </xs:restriction>
            </xs:simpleType>
         </xs:element>
+
+EXTENSION SOBRE UN ELEMENTO 
+ <xs:complexType name="infoPersonaAmpliada">
+    <xs:complexContent>
+      <xs:extension base="infoPersona">
+        <xs:sequence>
+          <xs:element name="ciudad" type="xs:string"/>
+          <xs:element name="pais" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
 RESTRICCION GLOBAL (HIJA DE SCHEMA)
 <xs:element name="mes" type="numeroMes"/>
 
