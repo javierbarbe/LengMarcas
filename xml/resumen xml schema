@@ -35,7 +35,7 @@ LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NI
 
 
 
-        RESTRICCIONES SOBRE ELEMENTOS SIMPLES
+        RESTRICCIONES SOBRE ELEMENTOS SIMPLESS
 
 xs:length 	        Especifica una longitud fija.
 xs:minLength 	    Especifica una longitud mínima.
