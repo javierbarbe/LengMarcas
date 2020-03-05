@@ -99,17 +99,18 @@ Indicadores de orden: <sequence> => orden obligado <all> => todos  pero pueden e
 Indicadores de ocurrencia: maxOccurs y minOccurs.
 
 Indicadores de grupo: de elementos (group) y de atribut                         GRUPOS DE ATRIBUTOS
-                         
+    GRUPOS ELEMENTOS                     
  <xs:element name="personas">                                             <xs:element name="persona" maxOccurs="unbounded">
     <xs:complexType>                                                             <xs:complexType>
       <xs:sequence>                                                                  <xs:attributeGroup ref="datosDePersona"/>
-          
-        <xs:element name="persona" type="datosDePersona"                   DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA)
-                    maxOccurs="unbounded"/>                                     <xs:attributeGroup name="datosDePersona">
-        </xs:sequence>                                                              <xs:attribute name="nombre" type="xs:string"/>
-    </xs:complexType>                                                               <xs:attribute name="edad" type="xs:positiveInteger"/>  
-  </xs:element>                                                                  </xs:attributeGroup> 
-                DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA)
+        <xs:element name="persona" type="datosDePersona"                  
+                    maxOccurs="unbounded"/>                                     DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA) 
+        </xs:sequence>                                                             <xs:attributeGroup name="datosDePersona">
+    </xs:complexType>                                                                   <xs:attribute name="nombre" type="xs:string"/>
+  </xs:element>                                                                         <xs:attribute name="edad" type="xs:positiveInteger"/>   
+                                                                                   </xs:attributeGroup> 
+     
+     DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA)
   <xs:complexType name="datosDePersona">
     <xs:sequence>
       <xs:group ref="datosBasicos"/>
