@@ -72,17 +72,30 @@ RESTRICCION DEFINIDA DENTRO DEL ELEMENTO
            </xs:simpleType>
         </xs:element>
 
-EXTENSION SOBRE UN ELEMENTO 
- <xs:complexType name="infoPersonaAmpliada">
-    <xs:complexContent>
-      <xs:extension base="infoPersona">
-        <xs:sequence>
-          <xs:element name="ciudad" type="xs:string"/>
-          <xs:element name="pais" type="xs:string"/>
-        </xs:sequence>
+EXTENSION SOBRE UN ELEMENTO          complejo                                          ELEMENTO BASE
+ <xs:complexType name="infoPersonaAmpliada">              |        <xs:complexType name="infoPersona">
+    <xs:complexContent>                                   |              <xs:sequence>
+      <xs:extension base="infoPersona">                   |                    <xs:element name="nombre" type="xs:string"/>
+        <xs:sequence>                                     |                      <xs:element name="edad" type="edadPersona"/>
+          <xs:element name="ciudad" type="xs:string"/>    |               </xs:sequence>
+          <xs:element name="pais" type="xs:string"/>      |              <xs:attribute name="numero" type="xs:integer"/>
+          </xs:sequence>                                  |        </xs:complexType>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+
+EXTENSION ELEMENTO SIMPLE
+<xs:element name="precio" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:decimal">
+                <xs:attribute name="moneda" type="xs:string"/>
+              </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+</xs:element>
+
+Contenido mixto         ==> (mixed="true"):   <xs:complexType mixed="true">
 
 RESTRICCION GLOBAL (HIJA DE SCHEMA)
 <xs:element name="mes" type="numeroMes"/>
