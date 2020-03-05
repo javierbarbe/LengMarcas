@@ -2,6 +2,13 @@ TODO DOCUMENTO XML SCHEMA TINE QUE EMPEZAR ASI
     <?xml version="1.0" encoding="UTF-8"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="NOMBRE_RAIZ">
+          
+ PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
+      <?xml version="1.0" encoding="UTF-8"?>
+      <nombrePrimerElemento_del_xml(raiz) xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="nombre_archivo.xsd">
+      <SIGUIENTEELEMENTO>
+          
 LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NINGUN OTRO ELEMENTO
      ELEMENTOS SIMPLES 
           <xs:element name="nombreELEMENTO" type="xs:string"/>
@@ -37,20 +44,13 @@ LOS ELEMENTOS GLOBALES TIENEN QUE SER HIJOS SOLO DE LA ETIQUETA SCHEMA, NO DE NI
 
         RESTRICCIONES SOBRE ELEMENTOS SIMPLESS
 
-xs:length 	        Especifica una longitud fija.
-xs:minLength 	    Especifica una longitud mínima.
-xs:maxLength 	    Especifica una longitud máxima.
-xs:pattern 	        Especifica un patrón de caracteres admitidos.
-xs:enumeration 	    Especifica una lista de valores admitidos.
-xs:whiteSpace 	    Especifica cómo se debe tratar a los posibles espacios en blanco, las tabulaciones, los saltos de línea y los retornos de carro que puedan aparecer.
-xs:maxInclusive 	Especifica que el valor debe ser menor o igual que el indicado.
-xs:maxExclusive 	Especifica que el valor debe ser menor que el indicado.
-xs:minExclusive 	Especifica que el valor debe ser mayor que el indicado.
-xs:minInclusive 	Especifica que el valor debe ser mayor o igual que el indicado.
-xs:totalDigits 	    Especifica el número máximo de dígitos que puede tener un número.
-xs:fractionDigits   Especifica el número máximo de decimales que puede tener un número.
+xs:length > Especifica una longitud fijA; xs:minLength=> Especifica una longitud mínima; xs:maxLength=> Especifica una longitud máxima.
+xs:pattern> Especifica un patrón de caracteres admitidos.>xs:enumeration >Especifica una lista de valores admitidos.
+xs:whiteSpace> Especifica cómo se debe tratar a los posibles espacios en blanco, las tabulaciones, etc.
+xs:maxInclusive>menor o =;xs:maxExclusive> mayor que;xs:minExclusive>menor;xs:minInclusive>mayor o igual que el indicado.
+xs:totalDigits >número máximo de dígitos ;xs:fractionDigits > Especifica el número máximo de decimales que puede tener un número.
 
-ENUMERACION // LISTA
+ENUMERACION // LISTA ===========>DEFINIDA DENTRO DEL ELEMENTO
 <xs:element name="color">
    <xs:simpleType>
       <xs:restriction base="xs:string">
@@ -61,17 +61,14 @@ ENUMERACION // LISTA
    </xs:simpleType>
 </xs:element>
 
-
-RESTRICCION DEFINIDA DENTRO DEL ELEMENTO
-        <xs:element name="mes">
-           <xs:simpleType>
-              <xs:restriction base="xs:integer">
-                 <xs:minInclusive value="1"/>
-                 <xs:maxInclusive value="12"/>
-              </xs:restriction>
-           </xs:simpleType>
-        </xs:element>
-
+ DEFINIDA FUERA DEL ELEMENTO (GLOBAL, HIJA DE SCHEMA)   |    PARA LLAMARLA DENTRO DEL SCHEMA
+  <xs:simpleType name="day">                            |          <xs:element name="fecha">
+        <xs:restriction base="xs:integer">              |                 <xs:complexType>
+            <xs:minInclusive value="1"/>                |                        <xs:attribute name="dia" type="day"/>
+            <xs:maxInclusive value="31"/>               |                        <xs:attribute name="mes" type="month"/>
+        </xs:restriction>                               |                        <xs:attribute name="anio" type="year"/>
+    </xs:simpleType>                                    |                 </xs:complexType>
+                                                        |            </xs:element>
 EXTENSION SOBRE UN ELEMENTO          complejo                                          ELEMENTO BASE
  <xs:complexType name="infoPersonaAmpliada">              |        <xs:complexType name="infoPersona">
     <xs:complexContent>                                   |              <xs:sequence>
@@ -96,6 +93,38 @@ EXTENSION ELEMENTO SIMPLE
 </xs:element>
 
 Contenido mixto         ==> (mixed="true"):   <xs:complexType mixed="true">
+    elementos complejos (debajo de <xs:complexType>
+Indicadores de orden: <sequence> => orden obligado <all> => todos  pero pueden estar desordenados 
+                     <choice> ==> SOLO permite elegir uno de los elementos!!
+Indicadores de ocurrencia: maxOccurs y minOccurs.
+
+Indicadores de grupo: de elementos (group) y de atribut                         GRUPOS DE ATRIBUTOS
+                         
+ <xs:element name="personas">                                             <xs:element name="persona" maxOccurs="unbounded">
+    <xs:complexType>                                                             <xs:complexType>
+      <xs:sequence>                                                                  <xs:attributeGroup ref="datosDePersona"/>
+          
+        <xs:element name="persona" type="datosDePersona"                   DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA)
+                    maxOccurs="unbounded"/>                                     <xs:attributeGroup name="datosDePersona">
+        </xs:sequence>                                                              <xs:attribute name="nombre" type="xs:string"/>
+    </xs:complexType>                                                               <xs:attribute name="edad" type="xs:positiveInteger"/>  
+  </xs:element>                                                                  </xs:attributeGroup> 
+                DECLARADO GLOBALMENTE (NO ES HIJO NADA MAS QUE DE SCHEMA)
+  <xs:complexType name="datosDePersona">
+    <xs:sequence>
+      <xs:group ref="datosBasicos"/>
+      <xs:element name="telefono" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="datosBasicos">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="edad" type="xs:positiveInteger"/>
+      <xs:element name="pais" type="xs:string"/>
+    </xs:sequence>
+  </xs:group>          
+                   
 
 RESTRICCION GLOBAL (HIJA DE SCHEMA)
 <xs:element name="mes" type="numeroMes"/>
@@ -107,8 +136,4 @@ RESTRICCION GLOBAL (HIJA DE SCHEMA)
    </xs:restriction>
 </xs:simpleType>
 
-PARA VALIDAR UN XML CONTRA UN SCHEMA NECESITO PONER EN EL XML 
-      <?xml version="1.0" encoding="UTF-8"?>
-      <nombrePrimerElemento_del_xml(raiz) xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="nombre_archivo.xsd">
-      <SIGUIENTEELEMENTO>
+
