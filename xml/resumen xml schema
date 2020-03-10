@@ -81,16 +81,22 @@ EXTENSION SOBRE UN ELEMENTO          complejo                                   
     </xs:complexContent>
   </xs:complexType>
 
-EXTENSION ELEMENTO SIMPLE
-<xs:element name="precio" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:simpleContent>
-              <xs:extension base="xs:decimal">
-                <xs:attribute name="moneda" type="xs:string"/>
-              </xs:extension>
-            </xs:simpleContent>
+EXTENSION ELEMENTO SIMPLE                                 |      <xs:complexType name="peinadoType">
+<xs:element name="precio" maxOccurs="unbounded">          |          <xs:simpleContent>  
+          <xs:complexType>                                |             <xs:extension base="peloType">
+            <xs:simpleContent>                            |               <xs:attribute name="longitud">
+              <xs:extension base="xs:decimal">            |                    <xs:simpleType>
+                <xs:attribute name="moneda" type="xs:string"/>                   <xs:restriction base="xs:string">
+              </xs:extension>                                                       <xs:pattern value="(largo|rasurado|medio)"/>
+            </xs:simpleContent>                                                    CIERRE
         </xs:complexType>
 </xs:element>
+                
+ <xs:simpleType name="peloType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(tupe|rastas|entradas|calvo|melenudo|injertos)"/>
+    </xs:restriction>
+</xs:simpleType>
 
 Contenido mixto         ==> (mixed="true"):   <xs:complexType mixed="true">
     elementos complejos (debajo de <xs:complexType>
