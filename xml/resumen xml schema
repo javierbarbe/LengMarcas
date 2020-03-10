@@ -143,4 +143,10 @@ RESTRICCION GLOBAL (HIJA DE SCHEMA)
    </xs:restriction>
 </xs:simpleType>
 
-
+<xs:complexType name="entrenadorType">
+    <xs:sequence>
+        <xs:element name="edad" type="xs:positiveInteger" minOccurs="0"/>
+        <xs:element name="peinado" type="peinadoType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="nombreentrenador" type="xs:ID" use="required"/>
+</xs:complexType>
