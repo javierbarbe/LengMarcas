@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="alumnos" type="institutoType"/>
+  
+  <xs:simpleType name="codAlumnoType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[a-z]\d{8}"/>
+    </xs:restriction>
+</xs:simpleType>
+  
+  <xs:complexType name="materiasType">
+        <xs:sequence>
+          <xs:element name="asignatura" type="asignaType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="asignaType">
+      <xs:sequence>
+        <xs:element name="nombre" type="nombreAsigType"/>
+      </xs:sequence>  
+      <xs:attribute name="cod" type="codAsignaturaType" use="required"/>
+      <xs:attribute name="nota" type="xs:integer" use="required"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="codAsignaturaType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="a[1-6]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="nombreAsigType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(FOL|FH|LMSGI|PAR|ISO|GBD)"/>
+    </xs:restriction>
+</xs:simpleType>
+  
+  <xs:complexType name="institutoType">
+  <xs:sequence>
+      <xs:element name="alumno" minOccurs="1" maxOccurs="unbounded" type="alumnoType"/>  
+  
+  </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="alumnoType">
+  <xs:sequence>
+    <xs:element name="cod" type="codAlumnoType"/>
+    <xs:element name="apenom" type="xs:string"/>
+    <xs:element name="direc" type="xs:string"  />
+    <xs:element name="pobla" type="xs:string"/>
+    <xs:element name="telef" type="xs:integer"/>
+    <xs:element name="materias" type="materiasType"/>
+  </xs:sequence>  
+  </xs:complexType>
+</xs:schema>

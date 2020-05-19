@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone ="no"?>
+<alumnos  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="alumnosxsdb.xsd">
+<alumno>
+    <cod>n12344354</cod>
+    <apenom>Alcalde García, Luis</apenom>
+    <direc>Las Manos, 24</direc>
+    <pobla>Lamadrid</pobla>
+    <telef>942756645</telef>
+    <materias>
+        <asignatura cod="a1" >
+        <nota>4</nota>
+             <nombre>FH</nombre>
+        </asignatura>
+        <asignatura cod="a2"  >
+            <nombre>FOL</nombre>
+            <nota>10</nota>
+        </asignatura>
+        <asignatura cod="a3"  >
+              <nombre>ISO</nombre >
+              <nota>3</nota>
+          </asignatura>
+        <asignatura cod="a4"  >
+            <nombre>LMSGI</nombre>
+            <nota>8</nota>
+        </asignatura>
+        <asignatura cod="a5"  >
+                <nota>6</nota>
+                <nombre>PAR</nombre>
+        </asignatura>
+        <asignatura cod="a6"  >
+                <nota>9</nota>
+                <nombre>GBD</nombre>
+        </asignatura>
+    </materias> 
+</alumno>
+
+<alumno>
+    <cod>n43483473</cod>
+    <apenom>González Pérez, Olga</apenom>
+    <direc>Miraflor 28 - 3A</direc>
+    <pobla>Torres</pobla>
+    <telef>942564355</telef>
+    <materias>
+        <asignatura cod="a1"  ><nombre>FH</nombre><nota>5</nota></asignatura>
+        <asignatura cod="a2"  ><nombre>FOL</nombre><nota>7</nota></asignatura>
+        <asignatura cod="a4"  ><nombre>LMSGI</nombre><nota>4</nota></asignatura>
+    </materias>
+</alumno>
+
+<alumno>
+    <cod>n88234924</cod>
+    <apenom>Fernández Díaz, María</apenom>
+    <direc>Luisa Fernanda 53</direc>
+    <pobla>Miera</pobla>
+    <telef>942346945</telef>
+    <materias>
+        <asignatura cod="a1" ><nombre>FH</nombre><nota>4</nota></asignatura>
+        <asignatura cod="a2"  ><nombre>FOL</nombre><nota>10</nota></asignatura>
+        <asignatura cod="a3"  ><nombre>ISO</nombre><nota>3</nota></asignatura>
+    </materias> 
+</alumno>
+
+
+
+</alumnos>

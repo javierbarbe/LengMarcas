@@ -1,0 +1,65 @@
+Consultas Practica xquery
+1.Obtener el nombre de todos los alumnos matriculados en algún módulo.
+		for $x in //alumno
+		let $cuenta := $x//asignatura
+		where count($cuenta)>=1
+		return $x/apenom/text()
+
+2.Obtener las calificaciones del alumno de código "n43483473" en cada módulo.
+
+	for $asignatura in //nombre
+	let $notas := $asignatura/../nota
+	where $asignatura/../../../cod="n43483473" 
+	order by $notas
+	return 
+		<asignatura>
+  			<titulo>{$asignatura/text()}</titulo>
+  			<nota>{$notas/text()}</nota>
+		</asignatura>
+  
+/// ej 3 Obtener el nombre y el teléfono de cada alumno ordenado por apellidos de forma descendente.
+ 	for $n in //alumno
+ 	let $te := $n/telef/text()
+ 	order by $n/apenom descending
+ 	return <alumno><nombre>{$n/apenom/text()}</nombre> <telefono>{$te}</telefono> </alumno>
+  
+  
+///****** ej 4. ¿Cuántos módulos hay?
+		 let $c := count(distinct-values(//nombre))
+		 return $c
+
+	
+// ej5 . Obtener los nombres de los alumnos matriculados en LMSGI y sus notas ordenado por notas.
+	for $matr in //nombre
+	let $nota := $matr/../nota
+	let $nombre := $matr/../../../apenom/text()
+	where $matr="LMSGI"
+	order by $matr/../nota
+	return <alumno>
+          	   <nombreAlumno>{$nombre}</nombreAlumno>
+         	   <nota>{$nota/text()}</nota>
+       		</alumno>
+
+////////EJ 6. Obtener los nombres y las calificaciones de los matriculados en FH que han aprobado.
+	for $alumn in //alumno
+	for $nota in $alumn/materias/asignatura[./nombre="FH"]
+	let $nombre := $alumn/apenom/text()
+	let $calificacion := $nota/nota/text()
+	let $asignatura2 := $nota/nombre/text()
+	where $nota/nota/text() >="5"
+	return <alumno>
+          	   <nombre2>{$nombre}</nombre2>
+          	   <nota>{$calificacion}</nota>
+          	   <asignatura>{$asignatura2}</asignatura>
+     	      </alumno>
+
+/// **************EJ6. LIMPIO
+for $alumn in //alumno
+for $nota in $alumn/materias/asignatura/nota
+where $nota>=5 and $nota/../nombre="FH"
+return <alumno>
+	   <nombre2>{$alumn/apenom/text()}</nombre2>
+	   <nota>{$nota/text()}</nota>
+       </alumno> 
+
+ 
