@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+<xs:element name="club" type="clubType"/>
+    
+
+<xs:complexType name="peinadoType">
+    <xs:simpleContent>
+        <xs:extension base="peloType">
+            <xs:attribute name="longitud">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="(largo|rasurado|medio)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="peloType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(tupe|rastas|entradas|calvo|melenudo|injertos)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="entrenadorType">
+    <xs:sequence>
+        <xs:element name="edad" type="xs:positiveInteger" minOccurs="0"/>
+        <xs:element name="peinado" type="peinadoType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="nombreentrenador" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="jugadorType">
+    <xs:sequence>
+        <xs:element name="dorsal" type="xs:positiveInteger" minOccurs="0"/>
+        <xs:element name="posicion" type="posicionType" />
+        <xs:element name="edad" type="xs:positiveInteger"/>
+    </xs:sequence>
+    <xs:attribute name="nombrejugador" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="posicionType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="((defensa|portero|medio|delantero)\s*)+"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="equipoType">
+    <xs:sequence>
+        <xs:element name="entrenador" type="entrenadorType"/>
+        <xs:element name="jugador" type="jugadorType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="nombreequipo" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="ligaType">
+    <xs:sequence>
+        <xs:element name="equipo" type="equipoType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="nombre" use="required" type="xs:ID"/>
+</xs:complexType>
+
+<xs:complexType name="clubType">
+    <xs:sequence>
+        <xs:element name="liga" type="ligaType" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

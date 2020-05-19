@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="articulos" type="articulosType"/>
+    
+    <xs:simpleType name="dineroType">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="monedaType">
+        <xs:simpleContent>
+            <xs:extension base="dineroType">
+                <xs:attribute name="moneda" use="optional" default="Euro">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="(Euro|Dolar)"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="articuloType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="precio" type="monedaType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="articulosType">
+        <xs:sequence>
+            <xs:element name="articulo" type="articuloType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

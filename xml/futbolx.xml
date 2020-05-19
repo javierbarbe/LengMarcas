@@ -1,0 +1,44 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"  standalone ="no"?>
+<club  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="futbolx2.xsd">
+
+
+        <liga nombre="espaniola">
+            <equipo nombreequipo="real_Madrid">
+                <entrenador nombreentrenador="zizu">
+                    <edad> 48</edad>
+                    <peinado longitud="rasurado">calvo</peinado>
+                </entrenador>
+                <jugador nombrejugador="pe">
+                    <dorsal> 13 </dorsal>
+                    <posicion>delantero</posicion>
+                    <edad> 22 </edad>
+                </jugador>
+            </equipo>
+            <equipo nombreequipo="atletico">
+                <entrenador nombreentrenador="chiolo">
+                    <edad> 48</edad>
+                    <peinado longitud="medio">injertos</peinado>
+                </entrenador>
+                <jugador nombrejugador="joao">
+                    <dorsal> 13 </dorsal>
+                    <posicion>delantero medio</posicion>
+                    <edad> 22 </edad>
+                </jugador>
+            </equipo>
+        </liga>
+        <liga nombre="italiana">
+            <equipo nombreequipo="juventus">
+            <entrenador nombreentrenador="delPiero">
+            </entrenador>
+                <jugador nombrejugador="ronaldo">
+                    <dorsal> 7 </dorsal>
+                    <posicion>delantero</posicion>
+                    <edad> 33 </edad>
+                </jugador>
+            </equipo>
+        </liga>
+
+  
+
+</club>

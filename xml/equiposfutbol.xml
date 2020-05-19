@@ -1,0 +1,34 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"  standalone ="no"?>
+<!DOCTYPE club SYSTEM "./futbol.dtd">
+<club>
+<ligas>
+    <nivel>
+        <liga nombre="española">
+            <equipo nombre="real Madrid">
+                <entrenador nombre="zizu">
+                    <edad> 48</edad>
+                    <peinado>   rasurado</peinado>
+                </entrenador>
+                <jugador nombre="">
+                    <dorsal> 13 </dorsal>
+                    <posicion> delantero </posicion>
+                    <edad> 22 </edad>
+                </jugador>
+            </equipo>
+        </liga>
+        <liga nombre="italiana">
+            <equipo nombre="juventus">
+            <entrenador nombre="del Piero">
+            </entrenador>
+                <jugador nombre="">
+                    <dorsal> 7 </dorsal>
+                    <posicion> extremo </posicion>
+                    <edad> 33 </edad>
+                </jugador>
+            </equipo>
+        </liga>
+    </nivel>
+    <resto></resto>
+
+</ligas>
+</club>

@@ -1,0 +1,17 @@
+<!ELEMENT club (ligas)>
+<!ELEMENT ligas (nivel, resto)>
+    <!ELEMENT nivel (liga*)>
+        <!ELEMENT liga ( equipo+)>
+            <!ELEMENT equipo (entrenador*, jugador+)>
+                <!ELEMENT entrenador (edad?, peinado?)>
+                    <!ELEMENT edad (#PCDATA)>
+                    <!ELEMENT peinado (#PCDATA)>
+                <!ELEMENT jugador (dorsal,posicion,edad)>
+                    <!ELEMENT dorsal (#PCDATA)>
+                    <!ELEMENT posicion (#PCDATA)>
+                    <!-- <!ELEMENT edad (#PCDATA)> -->
+        <!ATTLIST liga nombre CDATA #REQUIRED>
+        <!ATTLIST equipo nombre CDATA #REQUIRED>
+        <!ATTLIST entrenador nombre CDATA #REQUIRED>
+        <!ATTLIST jugador nombre CDATA  "CR7" >
+    <!ELEMENT resto   EMPTY>
