@@ -81,19 +81,17 @@ function myFunction() {
 }
 function alertFunc() {
   if (parseInt(fecha.getTime()) > parseInt(fechaLimite.getTime())) {
-    //console.log("es menor la hora");
+    
     salir = true;
     stop();
   } else {
     var estado = "";
     fecha = new Date();
-    // console.log(typeof fecha.getTime());
-    // console.log(typeof fechaLimite.getTime());
+    
     els = document.getElementsByClassName("_3-cMa _3Whw5");
     // console.log(els);
     for (let i = 0; i < els.length; i++) {
       estado = els[i].innerText;
-       //  console.log(estado+" estoy hasta la polla del estado copon");
       segundoActual = parseInt(fecha.getSeconds());
      
         //  estados.push(estado);
@@ -152,7 +150,6 @@ function alertFunc() {
         }
     }
 
-    //console.log(ano + " ano vale eso");
   }
   if (ano == true) {
     /// AÑADIENDO EL ENLACE QUE GENERE EL DOC////////////////////
@@ -176,11 +173,9 @@ function formateaHoras(arrayHoras) {
       if (primerElemento == null) {
         primerElemento = 0;
       }
-     // console.log(i + " valor del index cuando el estado es fin");
+     
       ultimoElemento = i - 1;
-      //   for ( var i =  primerElemento; i<ultimoElemento; i++){
-      //       console.log(arrayHoras[i]);
-      //   }
+    
       console.log(arrayHoras[primerElemento] + " comienzo de conexion");
       console.log(arrayHoras[ultimoElemento] + " fin de conexion");
       primerElemento = ultimoElemento + 2;
@@ -195,33 +190,11 @@ function formateaHoras(arrayHoras) {
     }
   }
 
-  /////
 
-  // arrayHoras.forEach((element, index) => {
-  //     if (element == "fin" && index!= 0) {
-  //         if (primerElemento==null) {primerElemento=0;}
-  //         console.log(index+ " valor del index cuando el estado es fin" );
-  //         ultimoElemento= index -1;
-  //       //   for ( var i =  primerElemento; i<ultimoElemento; i++){
-  //       //       console.log(arrayHoras[i]);
-  //       //   }
-  //       console.log(arrayHoras[primerElemento]+ " comienzo de conexion");
-  //       console.log(arrayHoras[ultimoElemento]+ " fin de conexion");
-  //         primerElemento= ultimoElemento+2;
-  //     }
-  //      if(element.match('.* (grabando audio)')){
-  //         console.log("coincide el elemento con grabando audio, indice "+index);
-  //         ultimoElemento= index;
-  //         grabando = true;
-  //     }
-  //     if (index == arrayHoras.length-1){
-  //         console.log(arrayHoras[arrayHoras.length-1]+ " fin de conexion");
-  //       }
-  //   });
 
   var primerElemento=0;
   var ultimoElemento;
   var grabando = false;
 
-  //////////
+
 }
